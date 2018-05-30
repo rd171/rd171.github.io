@@ -3,5 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
-
-hello
+Gender：Male
+Age：33
+Native Place：Hubei
