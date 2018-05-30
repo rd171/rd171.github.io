@@ -1,29 +1,18 @@
-Bheema is a theme suitabel for image heavy journal kind of websites. 
+# Jekyll template
+Light and beautiful blog style template for jekyll
 
-Demo: [http://webjeda.com/ashwath/](http://webjeda.com/ashwath/)
+[![Gitter](https://badges.gitter.im/nikrich/jekyll-slender-template.svg)](https://gitter.im/nikrich/jekyll-slender-template?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![Twitter](https://img.shields.io/badge/Twitter-@slender_rich-blue.svg?style=flat)](https://twitter.com/slender_rich)
 
+![preview](http://i.imgur.com/UzW9sxd.jpg)
 
-## Installation
-* Fork the repository
-* Go to settings and set Github Pages source as master.
-* Your new site should be ready.
+## Demo
+Find a demo [here](http://nikrich.github.io/jekyll-wing-template/#)
 
+## Contributing
 
-## Screenshots
-Default theme:
-
-![ashwath jekyll theme](http://webjeda.com/ashwath/images/Default.png)
-
-Color schemes (Full version)
-
-![ashwath jekyll theme](http://webjeda.com/ashwath/images/Purple.png)
-
-![ashwath jekyll theme](http://webjeda.com/ashwath/images/Blood.png)
-
-![ashwath jekyll theme](http://webjeda.com/ashwath/images/Mango.png)
-
-
-For more themes visit - [https://jekyll-themes.com](https://jekyll-themes.com)
-
-## License
-MIT License
+1. Clone the repo
+2. Checkout the dev branch ( Do not work directly on master )
+3. Use ```jekyll serve``` to run the project
+4. Make your changes and test
+5. Submit a pull request

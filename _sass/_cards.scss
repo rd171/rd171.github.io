@@ -1,140 +1,184 @@
-// Main card style
-.post-box {
-    box-shadow: 0 5px 10px -5px #777;
-    -webkit-box-shadow: 0 5px 10px -5px #777;
-    -moz-box-shadow: 0 5px 10px -5px #777;
-    border: 1px solid #eee;
-    border-bottom: 0;
-    margin-bottom: 40px;
-    padding: 0;
-    position: relative;
-    &:hover{
-        box-shadow: 0 7px 10px -4px #777;
-        -webkit-box-shadow: 0 7px 10px -4px #777;
-        -moz-box-shadow: 0 7px 10px -4px #777;
-    }
-    @include media-query($on-palm) {
-        margin-bottom: 20px;
-    }
+
+
+.card-panel {
+  transition: box-shadow .25s;
+  padding: $card-padding;
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  border-radius: 2px;
+  @extend .z-depth-1;
+  background-color: $card-bg-color;
 }
 
-
-.post-meta {
-    display: inline-block;
-    background: #26A65B; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #26A65B , #2ECC71); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #26A65B , #2ECC71); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */   
-    padding: 10px 25px;
-    color: $background-color;
-    text-align: center;
-    width: 8%;
-    font-size: 20px;
-    @include media-query($on-laptop) {
-          padding: 12px 15px;
-    }
-    @include media-query($on-palm) {
-            padding: 5px 20px;
-    }
-        @include media-query($on-iphone) {
-            padding: 10px 10px;
-            width: 15%;
-    }
-}
+.card { 
+  margin: $element-top-margin 0 $element-bottom-margin 0;
+  background-color: $card-bg-color;
+  transition: box-shadow .25s;
+  border-radius: 2px;
+  @extend .z-depth-1;
 
 
-.post-title-box{
-    display: inline-block;
-    padding: 0;
-    margin-left: 10px;
-    width: 80%;
-           @include media-query($on-iphone) {
-            width: 70%;
-    }
-}
-
-.post-list {
-    margin:0;
-    padding:0;
-    a {
-        text-decoration: none;
-    }
-}
-
-.post-link {
-    color: lighten($text-color, 10%);
-    text-shadow: 0 0 0.1px;
-    margin: 0;
+  .card-title {
     font-size: 24px;
-    letter-spacing: -1px;
-       @include media-query($on-laptop) {
-        font-size: 18px;
+    font-weight: 300;
+    &.activator {
+      cursor: pointer;
     }
-    @include media-query($on-palm) {
-        font-size: 15px;
-    }
-     @include media-query($on-iphone) {
-        font-size: 11px;
-    }
-}
+  }
 
-p.post-excerpt {
-    margin: 0;
-    color: $grey-color;
-    @include media-query($on-palm) {
-        font-size: 12px;
-    }
-       @include media-query($on-iphone) {
-        font-size: 10px;
-    }
-}
+  // Card Sizes
+  &.small, &.medium, &.large {
+    position: relative;
 
-// Category ribbon style
-.box {
-  width: 200px; height: 300px;
-  position: relative;
-  border: 1px solid #BBB;
-  background: #EEE;
-}
-.ribbon {
-  position: absolute;
-  right: -5px; top: -5px;
-  z-index: 1;
-  overflow: hidden;
-  width: 75px; height: 75px;
-  text-align: right;
-}
-.ribbon span {
-  font-size: 10px;
-  font-weight: bold;
-  color: #FFF;
-  text-transform: uppercase;
-  text-align: center;
-  line-height: 20px;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  width: 100px;
-  display: block;
-  background: #79A70A;
-  background: linear-gradient(#2ECC71 0%, #26A65B 100%);
-  box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
-  position: absolute;
-  top: 19px; right: -21px;
-}
-.ribbon span::before {
-  content: "";
-  position: absolute; left: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid #26A65B;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #26A65B;
-}
-.ribbon span::after {
-  content: "";
-  position: absolute; right: 0px; top: 100%;
-  z-index: -1;
-  border-left: 3px solid transparent;
-  border-right: 3px solid #26A65B;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #26A65B;
+    .card-image {
+      max-height: 60%;
+      overflow: hidden;
+    }
+    .card-image + .card-content {
+      max-height: 40%;
+    }
+    .card-content {
+      max-height: 100%;
+      overflow: hidden;
+    }
+    .card-action {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+  }
+
+  &.small {
+    height: 300px;
+  }
+
+  &.medium {
+    height: 400px;
+  }
+
+  &.large {
+    height: 500px;
+  }
+
+  // Horizontal Cards
+  &.horizontal {
+    &.small, &.medium, &.large {
+      .card-image {
+        height: 100%;
+        max-height: none;
+        overflow: visible;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+
+    display: flex;
+
+    .card-image {
+      max-width: 50%;
+      img {
+        max-width: 100%;
+        width: auto;
+      }
+    }
+
+    .card-stacked {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      position: relative;
+
+      .card-content {
+        flex-grow: 1;
+      }
+    }
+  }
+
+  // Sticky Action Section
+  &.sticky-action {
+    .card-action {
+      z-index: 2;
+    }
+
+    .card-reveal {
+      z-index: 1;
+      padding-bottom: 64px;
+    }
+  }
+
+
+
+
+  .card-image {
+    position: relative;
+
+    // Image background for content
+    img {
+      display: block;
+      border-radius: 2px 2px 0 0;
+      position: relative;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .card-title {
+      color: $card-bg-color;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: $card-padding;
+    }
+
+  }
+
+  .card-content {
+    padding: $card-padding;
+    border-radius: 0 0 2px 2px;
+
+    p {
+      margin: 0;
+      color: inherit;
+    }
+    .card-title {
+      line-height: 48px;
+    }
+  }
+
+  .card-action {
+    position: relative;
+    background-color: inherit;
+    border-top: 1px solid rgba(160,160,160,.2);
+    padding: $card-padding;
+
+    a:not(.btn):not(.btn-large):not(.btn-floating) {
+      color: $card-link-color;
+      margin-right: $card-padding;
+      transition: color .3s ease;
+      text-transform: uppercase;
+
+      &:hover { color: $card-link-color-light; }
+    }
+  }
+
+  .card-reveal {
+    padding: $card-padding;
+    position: absolute;
+    background-color: $card-bg-color;
+    width: 100%;
+    overflow-y: auto;
+    top: 100%;
+    height: 100%;
+    z-index: 3;
+    display: none;
+
+    .card-title {
+      cursor: pointer;
+      display: block;
+    }
+  }
 }
