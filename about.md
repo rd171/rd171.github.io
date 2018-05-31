@@ -3,6 +3,13 @@ layout: page
 title: About
 permalink: /about/
 ---
-Gender：Male  
-Age：33  
-Native Place：Hubei  
+# Basic Information
+|||
+|-|-|
+|Gender|Male|
+|Age|33|
+|Birth date|1985/7/2|
+|Native place|Hubei Province|
+|Educational background|Bachelor|
+|Work Experience ||
+|Delica |2008~2018|
