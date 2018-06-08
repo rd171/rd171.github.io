@@ -4,7 +4,47 @@ title:  "字符串分割"
 date:   2018-06-08 11:49:45 +0200
 categories: _posts
 ---
-sddfdfdf
+**场景**
+
+**需求**
+       Time;  Fbp(mmHg); Height (mmHg); Bbp(mmHg)
+15:22:36.015;     110.5;           -13; 106;
+15:22:36.015;     112.5;           -13; 105;
+15:22:36.015;     111.5;           -13; 105;
+15:22:36.015;     113.5;           -13; 106;
+
+**方案**
+
+BOOL AFXAPI AfxExtractSubString (
+CString& rString,
+LPCTSTR lpszFullString,
+int iSubString,
+TCHAR chSep = '\n'
+);
+
+参数
+rString
+给将接收一条单独的子字符的 CString 对象的引用。
+lpszFullString
+字符串包含字符串的索引获取。
+iSubString
+获取的子字符串的从零开始的索引从 lpszFullString。
+chSep
+使用的分隔符分隔子字符串。
+返回值
+TRUE 函数，如果成功提取子字符串。提供的索引；否则，FALSE。
+备注
+如果已知的唯一字符分隔每个子字符时，此函数用于获取源字符串中的多个子字符串是有用的。开头的函数搜索此 lpszFullString 参数，每次调用。
+此函数将返回 false，或者如果 lpszFullString 设置为 NULL 或函数到 lpszFullString 的末尾，而不必查找 iSubString指定的分隔符) +1 个匹配项。如果 lpszFullString 设置为 NULL，则 rString 参数不会从初始值修改；否则，子字符串，则无法为指定索引，提取 rString 参数设置为空字符串。
+
+**代码**
+{% highlight ruby %}
+CString strSub = _T(\"\");
+AfxExtractSubString(strSub,strLine,1, _T(\';\'));
+dFap = _ttof(strSub);
+AfxExtractSubString(strSub,strLine,5, _T(\';\'));
+dBap = _ttof(strSub);
+{% endhighlight %}
 
 {% highlight ruby %}
 def print_hi(name)
