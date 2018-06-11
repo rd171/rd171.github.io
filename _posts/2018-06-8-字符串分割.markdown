@@ -21,28 +21,34 @@ virtual BOOL ReadString(CString& rString);
 返回值  
 &nbsp;&nbsp;成功返回TRUE，失败返回FALSE。
 
+&nbsp;&nbsp;读取完一行数据后，可用AfxExtractSubString函数进行子字符串提取。
 
+BOOL AFXAPI AfxExtractSubString(CString& rString,LPCTSTR lpszFullString,int iSubString,TCHAR chSep);
 
+参数  
+&nbsp;&nbsp;rString 待分隔字符串  
+&nbsp;&nbsp;lpszFullString 提取的子字符串    
+&nbsp;&nbsp;iSubString 第几个子字符串     
+&nbsp;&nbsp;chSep 分隔符    
+返回值  
+&nbsp;&nbsp;成功返回TRUE，失败返回FALSE。
 
 **代码**  
-{% highlight ruby %}
-CString strSub = _T(\"\");
-AfxExtractSubString(strSub,strLine,1, _T(\';\'));
-dFap = _ttof(strSub);
-AfxExtractSubString(strSub,strLine,5, _T(\';\'));
-dBap = _ttof(strSub);
+{% highlight c %}
+bool ReadFile(CString strFile)
+{
+	CStdioFile mFile;
+	if ( !mFile.Open(strFile, CFile::modeRead | CFile::shareDenyNone) )
+		return false;
+	CString strLine;
+	CString strCol[4];
+	while ( mFile.ReadString(strLine) )
+	{
+		AfxExtractSubString(strCol[0],strLine,0, _T(';'));
+		AfxExtractSubString(strCol[1],strLine,1, _T(';'));
+		AfxExtractSubString(strCol[2],strLine,2, _T(';'));
+		AfxExtractSubString(strCol[3],strLine,3, _T(';'));
+	}
+	return true;
+}
 {% endhighlight %}
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: http://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
