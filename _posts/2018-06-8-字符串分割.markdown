@@ -15,7 +15,14 @@ categories: _posts
 **分析**
 &nbsp;&nbsp;分析数据文件，数据为按行存储，因此可以使用CStdioFile类的ReadString()函数按行读取数据。  
 
-virtual BOOL ReadString(CString& rString);
+virtual BOOL ReadString(CString& rString);  
+参数  
+&nbsp;&nbsp;rString 读取数据。  
+返回值  
+&nbsp;&nbsp;成功返回TRUE，失败返回FALSE。
+
+
+
 
 **代码**  
 {% highlight ruby %}
