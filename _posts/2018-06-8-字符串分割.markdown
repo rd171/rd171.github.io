@@ -5,7 +5,7 @@ date:   2018-06-08 11:49:45 +0200
 categories: _posts
 ---
 **需求**  
-&nbsp;&nbsp;在医疗设备开发中，经常需要读取不同设备间的数据进行对比分析，现有某设备的血压数据如下，  
+&nbsp;&nbsp;在医疗设备开发中，经常需要读取不同设备间的数据进行对比分析，现有某设备的血压数据文件如下，类型为ASII，用“;”进行分隔，第一列为日期类型，第二列为double类型，第三列为int类型，第四列为double。  
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time;Fbp(mmHg); Height (mmHg); Bbp(mmHg)  
 15:22:36.015;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 105  
 15:22:36.020;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 105  
@@ -13,28 +13,9 @@ categories: _posts
 15:22:36.030;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;112.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 106  
 
 **分析**
+&nbsp;&nbsp;分析数据文件，数据为按行存储，因此可以使用CStdioFile类的ReadString()函数按行读取数据。  
 
-BOOL AFXAPI AfxExtractSubString (
-CString& rString,
-LPCTSTR lpszFullString,
-int iSubString,
-TCHAR chSep = '\n'
-);
-
-参数
-rString
-给将接收一条单独的子字符的 CString 对象的引用。
-lpszFullString
-字符串包含字符串的索引获取。
-iSubString
-获取的子字符串的从零开始的索引从 lpszFullString。
-chSep
-使用的分隔符分隔子字符串。
-返回值
-TRUE 函数，如果成功提取子字符串。提供的索引；否则，FALSE。
-备注
-如果已知的唯一字符分隔每个子字符时，此函数用于获取源字符串中的多个子字符串是有用的。开头的函数搜索此 lpszFullString 参数，每次调用。
-此函数将返回 false，或者如果 lpszFullString 设置为 NULL 或函数到 lpszFullString 的末尾，而不必查找 iSubString指定的分隔符) +1 个匹配项。如果 lpszFullString 设置为 NULL，则 rString 参数不会从初始值修改；否则，子字符串，则无法为指定索引，提取 rString 参数设置为空字符串。
+virtual BOOL ReadString(CString& rString);
 
 **代码**  
 {% highlight ruby %}
