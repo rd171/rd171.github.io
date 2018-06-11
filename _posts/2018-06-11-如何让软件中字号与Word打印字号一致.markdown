@@ -1,0 +1,51 @@
+---
+layout: post
+title:  "如何让软件中字号与Word打印字号一致"
+date:   2018-06-11 19:06:00 +0200
+categories: _posts
+---
+**需求**  
+&nbsp;&nbsp;在医疗设备软件开发中，经常需要在不同尺寸显示器上显示相同字号的文字，即要求软件显现字号与显示设备无关，如下图效果：  
+![image](../img/20180611-如何让软件中字号与Word打印字号一致/1.jpg "image")
+
+
+**分析**  
+&nbsp;&nbsp;软件显示字号是像素值，与显示设备相关的，要想使显示与设备无关，则需要通过字号与显示设备DPI进行转换，可使用GetDeviceCaps()函数和MulDiv()函数来进行转换。  
+
+
+
+**代码**  
+{% highlight c %}
+void CMFCApplication1Dlg::OnPaint()
+{
+	if (IsIconic())
+	{
+		CPaintDC dc(this); // device context for painting
+
+		SendMessage(WM_ICONERASEBKGND, reinterpret_cast<WPARAM>(dc.GetSafeHdc()), 0);
+
+		// Center icon in client rectangle
+		int cxIcon = GetSystemMetrics(SM_CXICON);
+		int cyIcon = GetSystemMetrics(SM_CYICON);
+		CRect rect;
+		GetClientRect(&rect);
+		int x = (rect.Width() - cxIcon + 1) / 2;
+		int y = (rect.Height() - cyIcon + 1) / 2;
+
+		// Draw the icon
+		dc.DrawIcon(x, y, m_hIcon);
+	}
+	else
+	{
+		//CDialogEx::OnPaint();
+		CPaintDC dc(this);
+		CRect rc;
+		GetClientRect(rc);
+		CFont mFont;
+		int nHeight = -MulDiv(72, GetDeviceCaps(dc.m_hDC, LOGPIXELSY), 72);
+		mFont.CreateFont(nHeight, 0, 0, 0, FW_NORMAL, FALSE, FALSE,0,0,0,0,ANTIALIASED_QUALITY,0, _T("宋体"));
+		dc.SelectObject(&mFont);
+		dc.DrawText(_T("永"), &rc, DT_CENTER|DT_SINGLELINE|DT_VCENTER);
+	}
+}
+{% endhighlight %}
