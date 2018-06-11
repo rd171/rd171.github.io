@@ -4,16 +4,14 @@ title:  "字符串分割"
 date:   2018-06-08 11:49:45 +0200
 categories: _posts
 ---
-**场景**
+**需求**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Time;Fbp(mmHg); Height (mmHg); Bbp(mmHg);  
+15:22:36.015;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;110.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 105;  
+15:22:36.020;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;111.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 105;  
+15:22:36.025;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;113.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 106;  
+15:22:36.030;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;112.5;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-13; 106;  
 
-**需求**
-       Time;  Fbp(mmHg); Height (mmHg); Bbp(mmHg)
-15:22:36.015;     110.5;           -13; 106;
-15:22:36.015;     112.5;           -13; 105;
-15:22:36.015;     111.5;           -13; 105;
-15:22:36.015;     113.5;           -13; 106;
-
-**方案**
+**分析**
 
 BOOL AFXAPI AfxExtractSubString (
 CString& rString,
@@ -37,7 +35,7 @@ TRUE 函数，如果成功提取子字符串。提供的索引；否则，FALSE�
 如果已知的唯一字符分隔每个子字符时，此函数用于获取源字符串中的多个子字符串是有用的。开头的函数搜索此 lpszFullString 参数，每次调用。
 此函数将返回 false，或者如果 lpszFullString 设置为 NULL 或函数到 lpszFullString 的末尾，而不必查找 iSubString指定的分隔符) +1 个匹配项。如果 lpszFullString 设置为 NULL，则 rString 参数不会从初始值修改；否则，子字符串，则无法为指定索引，提取 rString 参数设置为空字符串。
 
-**代码**
+**代码**  
 {% highlight ruby %}
 CString strSub = _T(\"\");
 AfxExtractSubString(strSub,strLine,1, _T(\';\'));
