@@ -49,6 +49,7 @@ bool ReadFile(CString strFile)
 		AfxExtractSubString(strCol[2],strLine,2, _T(';'));
 		AfxExtractSubString(strCol[3],strLine,3, _T(';'));
 	}
+	mFile.Close();
 	return true;
 }
 {% endhighlight %}
