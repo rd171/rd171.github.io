@@ -9,4 +9,4 @@ categories: _posts
 &nbsp;&nbsp;其实MS Shell Dlg并不是一种字体，而是系统默认字体，在不同的语言下，对应着不同的字体。比如在英语环境下，Windows 98系统默认字体是MS Sans Serif；在希腊语环境下，Windows 98系统默认字体是 MS Sans Serif Greek  
 &nbsp;&nbsp;参考资料:[Using-MS-Shell-Dlg-and-MS-Shell-Dlg-2]
 
-[Using-MS-Shell-Dlg-and-MS-Shell-Dlg-2]: https://talk.jekyllrb.com/ https://msdn.microsoft.com/en-us/library/windows/desktop/dd374112(v=vs.85.aspx)
+[Using-MS-Shell-Dlg-and-MS-Shell-Dlg-2]:https://msdn.microsoft.com/en-us/library/windows/desktop/dd374112(v=vs.85.aspx)
