@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "Signal Analyzer加载数据"
+title:  "matlab-Signal Analyzer加载数据"
 date:   2018-06-16 19:06:00 +0200
 categories: _posts
 ---
