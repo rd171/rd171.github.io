@@ -1,0 +1,18 @@
+﻿---
+layout: post
+title:  "VC-类向导添加变量自动添加绝对路径"
+date:   2018-06-21 19:06:00 +0200
+categories: _posts
+---
+
+**问题**  
+&nbsp;&nbsp;使用MFC类向导为控件添加成员变量时，会在头文件中自动添加使用类头文件。如果是<strong><font color=#ff0000 size=3>自定义类</font></strong>则添加的是绝对路径，如果代码拷贝到其他机器上运行，则很有可能因工程目录不一致而无法编译。  
+
+**案例**  
+&nbsp;&nbsp;使用类向导添加自定义类型变量后，手动修改绝对路径为相对路径CSmartEdit是一派生自CEdit的自定义类，现使用类向导为某一Edit控件添加CSmartEdit类型的变量m_eInput，则头文件会自动添加CSmartEdit类的绝对路径，如下图：  
+![image](/img/2018-06-21-VC-类向导添加变量自动添加绝对路径/1.bmp "image")  
+
+![image](/img/2018-06-21-VC-类向导添加变量自动添加绝对路径/2.bmp "image")  
+
+**方案**
+&nbsp;&nbsp;使用类向导添加自定义类型变量后，手动修改绝对路径为相对路径
