@@ -14,10 +14,10 @@ categories: _posts
 **步骤**  
 &nbsp;&nbsp;设置步骤如下：  
 1、启动Matlab 2018a，在主页选项卡的最右边点击“帮助”按钮，如下图：    
-![image](/20180623-matlab-2018版离线使用帮助文档方法/1.bmp "image")  
+![image](/img/20180623-matlab-2018版离线使用帮助文档方法/1.bmp "image")  
 
 2、点击"预设项"按钮，如下图：  
-![image](/20180623-matlab-2018版离线使用帮助文档方法/2.bmp "image")  
+![image](/img/20180623-matlab-2018版离线使用帮助文档方法/2.bmp "image")  
 
 3、选择“帮助”类别，并选择“安装在本地”，如下图：  
-![image](/20180623-matlab-2018版离线使用帮助文档方法/3.bmp "image")  
+![image](/img/20180623-matlab-2018版离线使用帮助文档方法/3.bmp "image")  
