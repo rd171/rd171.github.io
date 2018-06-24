@@ -9,7 +9,8 @@ categories: _posts
 &nbsp;&nbsp;需要测量次数较多，不够准确。     
 
 **罗曼诺夫斯基准则**  
-&nbsp;&nbsp;测量次数较少。    
+&nbsp;&nbsp;测量次数较少。     
+&nbsp;&nbsp;matlab T分布函数tpdf() 
 
 **格罗布斯准则**  
 &nbsp;&nbsp;可靠性最高。  
