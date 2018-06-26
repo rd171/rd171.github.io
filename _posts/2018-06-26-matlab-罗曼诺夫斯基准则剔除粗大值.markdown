@@ -1,0 +1,66 @@
+﻿---
+layout: post
+title:  "matlab-罗曼诺夫斯基准则剔除粗大值"
+date:   2018-06-26 19:10:00 +0200
+categories: _posts
+---
+
+**罗曼诺夫斯基准则原理**  
+&nbsp;&nbsp;罗曼诺夫斯基准则又称 t检验准则，其特点是首先删除一个可疑的的测得值，然后按 t分布检验被剔除的测量值是否含有粗大误差   
+
+**罗曼诺夫斯基准则**  
+&nbsp;&nbsp;1）选取合适的显著度a，选择合适的数据处理长度n。由a、n在t分布表中查出系数K。(例如：a为0.05、n为15，则 K2.24)  
+&nbsp;&nbsp;2）计算处理段数据的平均值
+&nbsp;&nbsp;3）计算处理段数据的标准
+&nbsp;&nbsp;4）| 检测值 - 计算处理段数据的平均值 | > K*计算处理段数据的标准差,如果成立则检测值为粗大值，需要剔除。
+
+**实现代码**  
+```
+function out = fun_romanovsky(data, l, a)
+%   功能:罗曼诺夫斯基准则剔除粗大值　
+%   参数:
+%        data  输入数据
+%        l     分段长度
+%        a　　 显著度
+% 返回值：剔除粗大值后的数据
+    [m,n] = size(data);
+    if m > 1
+        data = data';
+    end
+    if length(data) <= l
+        out = NaN;
+        return;
+    end
+    out = data;
+    i1 = 1;
+    i2 = 1;
+   while ( i1 <= length(data)-l )
+        temp = data(i1:i1+l);
+        data_mean = mean(temp);
+%       v = temp - data_mean;
+%       求方差
+        temp_std = std(temp);
+%       K由l、a查表所得
+        K = 2.24;
+        if abs(data(i1 + l) - data_mean) > K*temp_std
+            out(i2 + l) = NaN;
+            data(i1 + l)= [];
+        else
+            i1 = i1 + 1;
+        end
+        i2 = i2 + 1;
+    end
+end
+```
+
+**测试代码**  
+
+data = [20.42 20.43 20.40 20.43 20.42 20.43 20.30 20.40 20.43 20.42 20.41 20.39 20.39 20.40 20.40 21.40 20.43 20.39 20.60 20.39 20.42 20.40 20.43];
+data1= fun_romanovsky(data, 15, 0.05);
+x = 1:length(data);
+figure(2);
+plot(x, data, 'b-', x , data1, 'ro');
+legend('处理前','处理后');  
+
+**效果图**  
+![image](/img/2018-06-26-matlab-罗曼诺夫斯基准则剔除粗大值/1.jpg "image")  
