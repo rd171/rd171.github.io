@@ -1,0 +1,17 @@
+﻿---
+layout: post
+title:  "matlab-复数求模求能量求幅度"
+date:   2018-06-28 19:12:00 +0200
+categories: _posts
+---
+
+**术语概念**  
+幅度：信号的振幅，用复数表示为：a + bi, a为实部，b为虚部    
+&nbsp;&nbsp;&nbsp;模： |a+bi| = sqrt(a^2 + b^2)  
+能量：a^2 + b^2
+
+**计算方式**  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;假设复数信号为ampl  
+幅度：sqrt(abs(ampl));      
+&nbsp;&nbsp;&nbsp;模： abs(ampl);  
+能量：(abs(ampl)).^2;
