@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "matlab-复数求模求能量求幅度"
+title:  "matlab-abs函数求绝对值求模"
 date:   2018-06-28 19:12:00 +0200
 categories: _posts
 ---
