@@ -1,0 +1,28 @@
+﻿---
+layout: post
+title:  "VC-Format显示为-0.000"
+date:   2018-07-02 19:12:00 +0200
+categories: _posts
+---
+
+**现象**  
+&nbsp;&nbsp;在VC开发中我们常用CString的Format函数来把int，float，double等类型数据转换为字符串类型。在浮点数据的转换中经常为出现“-0.000”这样的字符串，难道Format函数对数据的符号位有什么特殊处理？
+
+**原因**  
+&nbsp;&nbsp;经过分析发现，并非Format函数有什么特殊，而是浮点数转换精度截断造成的假象，如所示：  
+```
+double dVal = -0.0001；
+CString strVal;
+strVal.Format(_T("%.3lf"), dVal); // strVal会显示为“-0.000”
+```
+%.3lf表明保留dVal三位小数，-0.0001保留三位小数就变成了-0.000，所以strVal就成了“-0.000”  
+
+**方案**  
+&nbsp;&nbsp;为了避免出现0还带正负号的情况，就需要在格式化后再做一次处理。  
+```
+double dVal = -0.0001；
+CString strVal;
+strVal.Format(_T("%.3lf"), dVal); // strVal会显示为“-0.000”
+if ( _T("-0.000") == strVal )
+   strVal = 0.000;
+```
