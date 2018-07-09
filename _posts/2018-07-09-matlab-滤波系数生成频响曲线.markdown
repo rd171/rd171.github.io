@@ -1,0 +1,31 @@
+﻿---
+layout: post
+title:  "matlab-滤波系数生成频响曲线"
+date:   2018-07-09 23:43:00 +0200
+categories: _posts
+---
+
+**设计滤波器**  
+![image](/img/2018-07-09-matlab-滤波系数生成频响曲线/1.jpg "image")  
+```
+% build filter
+% sample rate
+fs = 6250;
+% cutoff frequency
+fc = 1000;
+% build a 6th-order highpass Butterworth filter with a cutoff frequency of 300 Hz,
+[b a]=butter(2 ,fc/(fs/2),'high');
+```
+
+**显示频响曲线**  
+![image](/img/2018-06-26-matlab-罗曼诺夫斯基准则剔除粗大值/1.jpg "image")  
+```
+% show magnitude response
+n = 512;
+[h,w] = freqz(b,a,[0:(fs/n/2):fs/2],fs);
+plot(w/1000,20*log10(abs(h)));
+ylabel('Magnitude(dB)')
+xlabel('Frequency(kHz)')
+title('Magnitude Response(dB)');
+grid on;
+```
