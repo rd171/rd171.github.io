@@ -6,7 +6,7 @@ categories: _posts
 ---
 
 **设计滤波器**  
-![image](/img/2018-07-09-matlab-滤波系数生成频响曲线/1.jpg "image")  
+![image](/img/2018-07-09-matlab-滤波系数生成频响曲线/1.bmp "image")  
 ```
 % build filter
 % sample rate
@@ -18,7 +18,7 @@ fc = 1000;
 ```
 
 **显示频响曲线**  
-![image](/img/2018-06-26-matlab-罗曼诺夫斯基准则剔除粗大值/1.jpg "image")  
+![image](/img/2018-07-09-matlab-滤波系数生成频响曲线/2.bmp "image")  
 ```
 % show magnitude response
 n = 512;
