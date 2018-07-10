@@ -1,0 +1,39 @@
+﻿---
+layout: post
+title:  "matlab-切比雪夫滤波系数生成"
+date:   2018-07-10 19:12:00 +0200
+categories: _posts
+---
+
+**系数生成代码**  
+2阶cheby2滤波器，截止频率为35Hz，带阻系数35dB
+```
+% Sampling Frequency
+Fs    = [4500 4800	5625 6250 7500 8000	9000 9375 10000	11250 12000	12500];
+% Order
+N     = 2;
+% Stopband Frequency
+Fstop = 35;
+% Stopband Attenuation (dB)
+Astop = 35;
+
+for i=1:length(Fs)
+    % Construct an FDESIGN object and call its CHEBY2 method.
+    h  = fdesign.highpass('N,Fst,Ast', N, Fstop, Astop, Fs(i));
+    Hd = design(h, 'cheby2');
+    [b, a] = tf(Hd);
+    str = ['// Fs=' num2str(Fs(i),'%.0f') ' Fc=' num2str(Fstop,'%.0f') '\n'];
+    fprintf(str);
+    disp(sprintf('%.17f, ', b));
+end
+fprintf('---------------------------\n');
+for i=1:length(Fs)
+    % Construct an FDESIGN object and call its CHEBY2 method.
+    h  = fdesign.highpass('N,Fst,Ast', N, Fstop, Astop, Fs(i));
+    Hd = design(h, 'cheby2');
+    [b, a] = tf(Hd);
+    str = ['// Fs=' num2str(Fs(i),'%.0f') ' Fc=' num2str(Fstop,'%.0f') '\n'];
+    fprintf(str);
+    disp(sprintf('%.17f, ', a));
+end
+```
