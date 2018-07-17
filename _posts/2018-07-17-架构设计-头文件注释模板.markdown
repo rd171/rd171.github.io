@@ -1,0 +1,16 @@
+﻿---
+layout: post
+title:  "架构设计-头文件注释模板"
+date:   2018-07-17 19:12:00 +0200
+categories: _posts
+---
+
+```
+//////////////////////////////////////////////////////////////////////
+// @file		Filter.h: interface for the CFilter class.
+// @author		Kevin Yan
+// @version		V1.0
+// @date		20180717
+// @brief		filter
+//////////////////////////////////////////////////////////////////////
+```
