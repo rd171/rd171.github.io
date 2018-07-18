@@ -24,6 +24,6 @@ RIPE NCC|欧洲, 中东, 中亚|[https://www.ripe.net/]
 [https://www.ripe.net/]:https://www.ripe.net/
 
 **IP查询网址**  
-
-[http://ip-api.com/]  
-[http://ip-api.com/]:http://ip-api.com/
+[https://www.ripe.net/]  
+ 
+[https://www.ripe.net/]:https://www.ripe.net/
