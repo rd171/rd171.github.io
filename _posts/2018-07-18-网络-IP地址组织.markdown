@@ -1,0 +1,28 @@
+﻿---
+layout: post
+title:  "网络-IP地址组织"
+date:   2018-07-18 19:12:00 +0200
+categories: _posts
+---
+
+**组织机构**  
+
+机构|覆盖区域|网址  
+-|-|-  
+NIC|总部|[https://www.internic.net/]
+AFRINIC|非洲|[https://www.afrinic.net/]  
+APNIC|亚洲/太平洋|[https://www.apnic.net/]
+ARIN|加拿大, 美国, 和一部分加勒比群岛|[https://www.arin.net/]
+LACNIC|拉丁美洲和部分加勒比岛屿|[http://www.lacnic.net/]
+RIPE NCC|欧洲, 中东, 中亚|[https://www.ripe.net/]
+[https://www.internic.net/]:https://www.internic.net/
+[https://www.afrinic.net/]:https://www.afrinic.net/
+[https://www.apnic.net/]:https://www.apnic.net/
+[https://www.arin.net/]:https://www.arin.net/
+[http://www.lacnic.net/]:http://www.lacnic.net/
+[https://www.ripe.net/]:https://www.ripe.net/
+
+**IP查询网址**  
+
+[http://ip-api.com/]  
+[http://ip-api.com/]:http://ip-api.com/
