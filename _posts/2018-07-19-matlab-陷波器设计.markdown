@@ -62,3 +62,4 @@ x = 1:length(data);
 plot(x, data, x, data1);
 legend('原始信号', '滤波后信号');
 ```
+![image](/img/2018-07-19-matlab-陷波器设计/1.bmp "image")  
