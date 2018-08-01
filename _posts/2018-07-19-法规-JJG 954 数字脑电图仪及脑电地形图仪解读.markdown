@@ -8,10 +8,10 @@ categories: _posts
 **术语**  
 时间常数  
 
-**仪器**
-&nbsp;&nbsp;推荐使用[台湾WHALETEQ Co., LTD公司生产的型号为SECG4.0的信号发生器]，因为该设备电压精度可到2.5uV。  
+**仪器**  
+&nbsp;&nbsp;推荐使用台湾WHALETEQ Co., LTD公司生产的型号为[SECG4.0]的信号发生器，因为该设备电压精度可到2.5uV。  
 
-[台湾WHALETEQ Co., LTD公司生产的型号为SECG4.0的信号发生器]:https://dev.i-playful.com/17-11-01_whaleteq/cn/Products/Detail/18/SECG%204.0#tag=proOverview
+[SECG4.0]:https://dev.i-playful.com/17-11-01_whaleteq/cn/Products/Detail/18/SECG%204.0#tag=proOverview
 **解读**  
 &nbsp;&nbsp;数字脑电图仪属于计量设备，所以要想在国内拿到医疗器械许可证就必须满足此标准。  
 &nbsp;&nbsp;脑电图仪说简单点就是用来测量大脑头皮上电压的设备。如何保证一个测量电脑的设备性能准确？无非是电压，频响方面进行测试。所以标准中有“电压测量”章节。  
