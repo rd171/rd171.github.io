@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<div class="home">
+ <div class="top card">
+    <p class="description">{{ site.description }}</p>
+    <a href="about" class="btn">Read More</a>
+  </div>
+  <div class="posts card">
+      <div class="card-content white-text">
+      <span class="card-title">Category</span>
+<ul>
+    {% for category in site.categories %}
+    <li><a href="/categories/{{ category | first }}/" title="view all posts">{{ category | first }} {{ category | last | size }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
+      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      </div>
+   </div>
+
+</div>
+<div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="zh_CN" data-type="horizontal" data-theme="dark" data-vanity="kevin-yan-98b508108"><a class="LI-simple-link" href=' '>Kevin Yan</ a></div>
