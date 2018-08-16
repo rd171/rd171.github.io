@@ -2,7 +2,7 @@
 layout: post
 title:  "软件工程-6种结对编程模式"
 date:   2018-06-15 19:06:00 +0200
-categories: _posts
+categories: 软件工程
 ---
 
 &nbsp;&nbsp;6种结对编程模式：  

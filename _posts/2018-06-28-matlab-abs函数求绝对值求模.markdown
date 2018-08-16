@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-abs函数求绝对值求模"
 date:   2018-06-28 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 **简介**  
 求绝对值或求复数的模

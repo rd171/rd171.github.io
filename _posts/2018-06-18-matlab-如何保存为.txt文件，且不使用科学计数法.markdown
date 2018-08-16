@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-如何保存为.txt文件，且不使用科学计数法"
 date:   2018-06-18 08:01:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 ##### 1 使用save函数保存  

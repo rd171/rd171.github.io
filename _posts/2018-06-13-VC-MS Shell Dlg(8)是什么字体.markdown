@@ -2,7 +2,7 @@
 layout: post
 title:  "VC-MS Shell Dlg(8)是什么字体"
 date:   2018-06-13 19:06:00 +0200
-categories: _posts
+categories: VC
 ---
 
 &nbsp;&nbsp;在MFC软件开发过程中，对话框默认字体为MS Shell Dlg(8),括号里的数字表示字号，那么MS Shell Dlg是什么字体呢？  

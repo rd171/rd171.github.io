@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-罗曼诺夫斯基准则剔除粗大值"
 date:   2018-06-26 19:10:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **罗曼诺夫斯基准则原理**  

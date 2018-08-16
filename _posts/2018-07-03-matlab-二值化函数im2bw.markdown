@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-二值化函数im2bw"
 date:   2018-07-03 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **语法**  

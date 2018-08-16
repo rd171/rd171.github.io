@@ -2,7 +2,7 @@
 layout: post
 title:  "VC-如何让软件中字号与Word打印字号一致"
 date:   2018-06-11 19:06:00 +0200
-categories: _posts
+categories: VC
 ---
 **需求**  
 &nbsp;&nbsp;在医疗设备软件开发中，经常需要在不同尺寸显示器上显示相同字号的文字，即要求软件显现字号与显示设备无关，如下图效果：  

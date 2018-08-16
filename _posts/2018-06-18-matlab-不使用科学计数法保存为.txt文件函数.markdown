@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-不使用科学计数法保存为.txt文件函数"
 date:   2018-06-18 11:49:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 ##### 函数代码  

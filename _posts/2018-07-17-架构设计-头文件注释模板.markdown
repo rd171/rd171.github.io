@@ -2,7 +2,7 @@
 layout: post
 title:  "架构设计-头文件注释模板"
 date:   2018-07-17 19:12:00 +0200
-categories: _posts
+categories: 架构设计
 ---
 
 ```

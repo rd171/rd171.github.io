@@ -2,7 +2,7 @@
 layout: post
 title:  "工具-Word转MarkDown工具"
 date:   2018-06-13 19:06:00 +0200
-categories: _posts
+categories: Tools
 ---
 **需求**  
 &nbsp;&nbsp;a）如何将现有word文档转换为MarkDown  

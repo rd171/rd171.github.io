@@ -2,7 +2,7 @@
 layout: post
 title:  "VC-衬线字体与无衬线字体"
 date:   2018-06-13 19:06:00 +0200
-categories: _posts
+categories: VC
 ---
 
 &nbsp;&nbsp;参考资料:[衬线字体与无衬线字体]

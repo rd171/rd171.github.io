@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-陷波器设计"
 date:   2018-07-19 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 ```

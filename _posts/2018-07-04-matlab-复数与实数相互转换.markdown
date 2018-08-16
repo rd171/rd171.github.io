@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-复数与实数相互转换"
 date:   2018-07-04 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **实数转复数**  

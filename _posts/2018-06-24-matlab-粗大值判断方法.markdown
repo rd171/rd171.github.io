@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-粗大值判断方法"
 date:   2018-06-24 11:10:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **莱以特准则**  
@@ -10,7 +10,7 @@ categories: _posts
 
 **罗曼诺夫斯基准则**  
 &nbsp;&nbsp;测量次数较少。     
-&nbsp;&nbsp;matlab T分布函数tpdf() 
+&nbsp;&nbsp;matlab T分布函数tpdf()
 
 **格罗布斯准则**  
 &nbsp;&nbsp;可靠性最高。  

@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-采样位数与信号强度关系"
 date:   2018-06-28 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **概念**  

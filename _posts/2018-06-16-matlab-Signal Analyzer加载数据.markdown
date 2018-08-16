@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-Signal Analyzer加载数据"
 date:   2018-06-16 19:06:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 &nbsp;&nbsp;1)将数据导入到Matlab的工作区  

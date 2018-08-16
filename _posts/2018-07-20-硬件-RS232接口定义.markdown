@@ -2,7 +2,7 @@
 layout: post
 title:  "硬件-RS232接口定义"
 date:   2018-07-23 19:12:00 +0200
-categories: _posts
+categories: 硬件
 ---
 ![image](/img/2018-07-20-硬件-RS232接口定义/1.jpg "image")  
 ![image](/img/2018-07-20-硬件-RS232接口定义/2.jpg "image")  

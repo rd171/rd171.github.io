@@ -2,7 +2,7 @@
 layout: post
 title:  "VC-字符串分割"
 date:   2018-06-08 11:49:45 +0200
-categories: _posts
+categories: VC
 ---
 **需求**  
 &nbsp;&nbsp;在医疗设备开发中，经常需要读取不同设备间的数据进行对比分析，现有某设备的血压数据文件如下，类型为ASII，用“;”进行分隔，第一列为日期类型，第二列为double类型，第三列为int类型，第四列为double。  

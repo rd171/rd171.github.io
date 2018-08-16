@@ -2,7 +2,7 @@
 layout: post
 title:  "研发管理-立项报告模板"
 date:   2018-08-03 19:12:00 +0200
-categories: _posts
+categories: 研发管理
 ---
 ##### 1背景介绍      
 ###### 1.1行业趋势  

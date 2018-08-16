@@ -2,7 +2,7 @@
 layout: post
 title:  "matlab-切比雪夫滤波系数生成"
 date:   2018-07-10 19:12:00 +0200
-categories: _posts
+categories: Matlab
 ---
 
 **系数生成代码**  

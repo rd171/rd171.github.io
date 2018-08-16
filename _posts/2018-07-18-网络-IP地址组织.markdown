@@ -2,7 +2,7 @@
 layout: post
 title:  "网络-IP地址组织"
 date:   2018-07-18 19:12:00 +0200
-categories: _posts
+categories: 网络
 ---
 
 **组织机构**  
@@ -25,5 +25,5 @@ RIPE NCC|欧洲, 中东, 中亚|[https://www.ripe.net/]
 
 **IP查询网址**  
 [https://www.ripe.net/]  
- 
+
 [https://www.ripe.net/]:https://www.ripe.net/
