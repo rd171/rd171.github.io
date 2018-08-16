@@ -1,0 +1,4 @@
+1、开始 -> 运行 -> ruby 选择Start Command Prompt with Ruby
+2、cd 到D:\work\github\rd171.github.io
+3、jekyll serve
+如果4000端口占用，结束FoxitProtect.exe进程                                                  

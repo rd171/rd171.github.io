@@ -11,9 +11,9 @@ layout: default
       <div class="card-content white-text">
       <span class="card-title">Category</span>
 <ul>
-  {% for post in site.categories.[page.category] %}
-      {{ post.date }} {{ post.title }}
-  {% endfor %}
+  {\% for post in site.categories.[page.category] %\}
+      {\{ post.date }\} {\{ post.title }\}
+  {\% endfor %\}
 </ul>
 
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
