@@ -23,6 +23,15 @@ layout: default
         2
       </ul>
 
+      <h4>Category</h4>
+<ul>
+    {% for category in site.categories %}
+    <li><a href="/categories/{{ category | first }}/" title="view all
+posts">{{ category | first }} {{ category | last | size }}</a>
+    </li>
+    {% endfor %}
+</ul>
+
       <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
       </div>
    </div>
