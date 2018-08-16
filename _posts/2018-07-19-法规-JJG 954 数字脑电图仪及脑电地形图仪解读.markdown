@@ -2,7 +2,7 @@
 layout: post
 title:  "法规-JJG 954 数字脑电图仪及脑电地形图仪解读"
 date:   2018-07-19 19:12:00 +0200
-categories: _posts
+categories:法规
 ---
 **前言**  
 **术语**  
