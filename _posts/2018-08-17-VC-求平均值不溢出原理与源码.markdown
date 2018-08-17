@@ -1,0 +1,36 @@
+﻿---
+layout: post
+title:  "VC-求平均值不溢出原理与源码"
+date:   2018-08-17 19:12:00 +0200
+categories: VC
+---
+**溢出原理**  
+
+**公式及推导**  
+Avg<sub>i+1</sub> = Avg<sub>i</sub> + (x - Avg<sub>i</sub>)/(i+1)  
+Avg<sub>i+1</sub>*(i+1) = Avg<sub>i</sub>*(i+1) + (x - Avg<sub>i</sub>)  
+左边Avg<sub>i+1</sub>*(i+1)表示i+1个第i+1时刻的平均值。  
+右边Avgi(i+1)表示i+1个第i时刻的平均值，(x - Avg<sub>i</sub>)表示第i+1时刻的平均值。  
+所以左边等于右边
+
+**源码及测试**
+```
+double calc_avg(double avg, double val, int index)
+{
+	return avg + (val - avg)/index;
+}
+
+int main(int argc, char* argv[])
+{
+	 int data[4] = {0xFFFF0001, 0xFFFF0001, 0xFFFF0001, 0xFFFF0001};
+	 int nAvg = (data[0]+data[1]+data[2]+data[3])/4;
+
+	double dAvg = 0;
+	for ( int i = 0; i < 4; i++ )
+	{
+		dAvg = calc_avg(dAvg, data[i], i+1);
+	}
+	int nTemp = dAvg;
+	return 0;
+}
+```  
