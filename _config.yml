@@ -10,7 +10,7 @@ title: Kevin Yan's Blog
 email: your-email@domain.com
 description:  Welcome to my blog.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "http://rd171.github.io" # the base hostname & protocol for your site
 safe: false
 twitter_username: jekyllrb
 github_username:  jekyll
