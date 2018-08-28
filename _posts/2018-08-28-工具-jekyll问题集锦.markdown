@@ -2,7 +2,7 @@
 layout: post
 title:  "工具-jekyll问题集锦"
 date:   2018-08-28 19:12:00 +0200
-categories: 工具
+categories: Tools
 ---
 ###### 1、命令jekyll serve无法启动  
 原因：4000端口被占用  
