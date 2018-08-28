@@ -1,0 +1,25 @@
+﻿---
+layout: post
+title:  "工具-jekyll问题集锦"
+date:   2018-08-28 19:12:00 +0200
+categories: 工具
+---
+###### 1、命令jekyll serve无法启动  
+原因：4000端口被占用  
+方法：结束foxread.exe  
+
+###### 2、本地无法预览带中文字符的HTML页面  
+原因：不支持中文编码  
+方法：增加ruby编码方式  
+修改安装目录\Ruby22-x64\lib\ruby\2.2.0\webrick\httpservlet下的filehandler.rb文件，找到下列两处，添加一句（+的一行为添加部分）  
+```
+path = req.path_info.dup.force_encoding(Encoding.find("filesystem"))
++ path.force_encoding("UTF-8") # 加入编码
+if trailing_pathsep?(req.path_info)  
+```
+```
+break if base == "/"
++ base.force_encoding("UTF-8") #加入編碼
+break unless File.directory?(File.expand_path(res.filename + base))  
+```
+修改完重新jekyll serve即可支持中文文件名。
