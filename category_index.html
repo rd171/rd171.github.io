@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<section>
+	<div>
+    <div>
+            <section>
+                <div>
+                	<a href="/" rel="nofollow" >Home</a>
+                    <span>&#9830;</span>
+                    <span>&#9830;</span>
+                    <h2>Category:&nbsp;&nbsp;{{ page.category }}</h2>
+                </div>
+                {% for post in site.categories.[page.category] %}
+                <div>
+                	<p>{{ post.date | date: '%Y' }}</p>
+                	<div>
+                		<article>
+                            <div>
+                                <p><span>&#8227;</span><time pubdate="{{ post.date | date: '%b %d, %Y' }}">{{ post.date | date: '%b %d' }}</time></p>
+                                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                            </div>
+                            <div>
+                                <p>{{ post.description }}</p>
+                            </div>
+                        </article><!-- //archive -->
+                	</div>
+            	</div>
+            	{% endfor %}
+            </section><!-- //violet-post -->
+        </div>
+	</div>
+</section><!-- //content -->

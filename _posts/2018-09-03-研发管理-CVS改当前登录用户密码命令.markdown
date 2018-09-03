@@ -1,0 +1,7 @@
+﻿---
+layout: post
+title:  "研发管理-CVS改当前登录用户密码命令"
+date:   2018-09-03 19:12:00 +0200
+categories: 研发管理
+---
+cvs -d:pserver:administrator@服务器IP:2401/仓库名称 passwd -r administrator -a 用户名
