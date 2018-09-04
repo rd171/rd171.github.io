@@ -1,0 +1,11 @@
+﻿---
+layout: post
+title:  "开源库-dmake安装"
+date:   2018-09-04 19:12:00 +0200
+categories: 开源库
+---
+开始 -> 所有程序 -> Visual Studio 2012 -> Visual Studio Tools -> VS2012 x86 Native Tools Command Prompt 输入如下命令进行安装  
+
+```
+ppm install dmake
+```
