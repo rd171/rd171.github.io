@@ -8,7 +8,7 @@
 # Site settings
 title: Kevin Yan's Blog
 email: your-email@domain.com
-description:  Welcome to my blog.
+description:  Too young too simple.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rd171.github.io" # the base hostname & protocol for your site
 safe: false
