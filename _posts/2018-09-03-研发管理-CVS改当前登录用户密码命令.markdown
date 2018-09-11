@@ -7,6 +7,8 @@ categories: 研发管理
 登陆cvs
 ```
 cvs -d:pserver:administrator@服务器IP:2401/仓库名称 login  
+```
 修改当前cvs账户密码  
 ```
 cvs -d:pserver:administrator@服务器IP:2401/仓库名称 passwd -r administrator -a 用户名
+```
