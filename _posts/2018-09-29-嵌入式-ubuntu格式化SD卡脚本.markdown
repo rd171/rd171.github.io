@@ -1,0 +1,40 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu格式化SD卡脚本"
+date:   2018-09-29 19:30:00 +0200
+categories: 嵌入式
+---
+
+**ubuntu格式化SD卡脚本** 
+
+1、取得root权限  
+sudo -i  
+
+2、查看所有分区  
+sudo blkid -o list  
+
+3、然后使用fdisk工具  
+fdisk /dev/sdc1  
+
+4、查看SD卡分区  
+p  
+
+5、依次删除分区  
+d  
+1  
+d  
+2  
+d  
+3  
+d  
+4  
+
+6、查看SD分区  
+p  
+
+7、新建分区  
+n  
+p  
+1  
+   
+  
