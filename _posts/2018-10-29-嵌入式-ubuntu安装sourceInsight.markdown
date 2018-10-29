@@ -7,7 +7,7 @@ categories: 嵌入式
 
 **安装sourceInsight**  
 1、进入ubuntu系统命令行，使用命令sudo apt-get install wine安装wine软件。  
-2、下载sourceinsight安装包，并将安装包拷贝到ubuntu系统中的某个目录。  
+2、下载[sourceinsight安装包]，并将安装包拷贝到ubuntu系统中的某个目录。  
 3、进入ubuntu系统命令行，并进入sourceinsight安装包所在目录，使用命令$wine InsightSetup.exe（InsightSetup.exe为sourceinsight安装包名称）  
 4、安装完成后会自动运行sourceinsight，并要求输入注册码，注册码为：SI3US-361500-17409  
 
