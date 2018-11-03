@@ -7,34 +7,39 @@ categories: 嵌入式
 
 ##### 查看当前路径  
 ```
-pwd 
+pwd
 ```
 
 
 ##### 查看当前路径文件  
 ```
 ls  
-``` 
+```
 
 ##### 查看网络  
 ```
 ifconfig  
-``` 
+```
 
 ##### 查看网络设备配置  
 ```
-cd wifi 
+cd wifi
 ls
-cat ipaddr 
-cat lan_addr 
-``` 
+cat ipaddr
+cat lan_addr
+```
 
 ##### 查看文件abc
 ```
-cat abc 
-``` 
+cat abc
+```
 
 ##### 查看所有进程
 ```
-ps 
-``` 
+ps
+```
+
+##### 修改IP地址
+```
+vi /lib/systemd/network/10-eth0.network 
+```
