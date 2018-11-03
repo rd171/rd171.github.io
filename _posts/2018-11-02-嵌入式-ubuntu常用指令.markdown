@@ -41,5 +41,16 @@ ps
 
 ##### 修改IP地址
 ```
-vi /lib/systemd/network/10-eth0.network 
+sudo ifconfig eth0 192.168.1.100 broadcast 192.168.1.255 netmask 255.255.255.0
+```
+
+##### 修改网关
+```
+sudo route add default gw 192.168.1.1 dev eth0
+```
+
+##### 修改DNS
+```
+编辑/etc/resolv.conf文件，增加
+nameserver 202.106.0.20
 ```
