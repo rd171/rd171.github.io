@@ -1,0 +1,23 @@
+﻿---
+layout: post
+title:  "VC-写文件过程中断电文件防损保护"
+date:   2018-11-16 19:30:00 +0200
+categories: VC
+---
+
+##### fwrite    
+```
+vi abc
+```
+
+
+##### fflush  
+```
+按i键进入编辑状态  
+```
+
+##### fileno    
+```
+按esc键，然后输入下面这行命令
+:qw  
+```
