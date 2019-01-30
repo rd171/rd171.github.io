@@ -1,0 +1,17 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu安装QT5.2.1"
+date:   2019-1-30 15:45:00 +0200
+categories: 嵌入式
+---
+
+##### 步骤如下:  
+###### 1、https://download.qt.io/archive/qt/5.2/5.2.1/下载安装包qt-opensource-linux-x64-5.2.1.run  
+###### 2、cd进入qt-opensource-linux-x64-5.2.1.run程序所在目录  
+###### 3、执行如下命令进行安装  
+```
+sudo ./qt-opensource-linux-x64-5.2.1.run
+```  
+###### 4、双击/opt/Qt5.2.1/Tools/QtCreator/bin/qtcreator运行QtCreator  
+###### 5、在任务栏上右键点击QtCreator，选择“Lock to Launcher”  
+###### 6、
