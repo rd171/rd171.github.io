@@ -14,4 +14,7 @@ sudo ./qt-opensource-linux-x64-5.2.1.run
 ```  
 ###### 4、双击/opt/Qt5.2.1/Tools/QtCreator/bin/qtcreator运行QtCreator  
 ###### 5、在任务栏上右键点击QtCreator，选择“Lock to Launcher”  
-###### 6、
+###### 6、执行如下命令为.config目录配置权限  （kevin为当前系统用户名）
+```
+chown -R kevin ~/.config/
+```
