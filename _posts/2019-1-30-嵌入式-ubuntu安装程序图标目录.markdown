@@ -1,0 +1,11 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu安装程序目录"
+date:   2019-1-30 15:06:00 +0200
+categories: 嵌入式
+---
+
+##### 路径如下：    
+```
+/usr/share/applications
+```
