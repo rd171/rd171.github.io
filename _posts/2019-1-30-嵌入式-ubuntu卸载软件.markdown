@@ -1,0 +1,15 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu卸载软件"
+date:   2019-1-30 15:45:00 +0200
+categories: 嵌入式
+---
+
+###### 1、查看已安装程序列表命令:  
+```
+dpkg --list
+```  
+###### 2、卸载软件命令:    
+```
+sudo apt-get --purge remove <programname>
+```  
