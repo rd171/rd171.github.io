@@ -17,6 +17,12 @@ ls
 ```
 mkdir /abc
 ```
+
+##### 删除文件夹abc
+```
+rm -rf /abc
+```
+
 ##### 查看网络  
 ```
 ifconfig  
