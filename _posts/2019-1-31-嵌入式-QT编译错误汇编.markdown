@@ -5,8 +5,16 @@ date:   2019-1-31 15:50:00 +0200
 categories: 嵌入式
 ---
 
-###### 编译时提示错误:cannot find -lGL  
+###### 1、编译时提示错误:cannot find -lGL  
 ```
 sudo apt-get install libgl1-mesa-dev
 ```  
- 
+
+##### 2、运行QT提示Help：error while loading shared libraries: libgstreamer-0.10.so.0: cannot open shared object file: No such file or directory  
+1)下载http://ftp.ca.debian.org/debian/pool/main/g/gstreamer0.10/libgstreamer0.10-0_0.10.36-1.5_amd64.deb  
+2)下载http://ftp.ca.debian.org/debian/pool/main/g/gst-plugins-base0.10/libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb  
+执行如下代码安装：  
+```
+sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
+sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
+```
