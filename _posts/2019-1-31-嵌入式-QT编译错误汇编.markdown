@@ -1,0 +1,12 @@
+﻿---
+layout: post
+title:  "嵌入式-QT编译错误汇编"
+date:   2019-1-31 15:50:00 +0200
+categories: 嵌入式
+---
+
+###### 编译时提示错误:cannot find -lGL  
+```
+sudo apt-get install libgl1-mesa-dev
+```  
+ 
