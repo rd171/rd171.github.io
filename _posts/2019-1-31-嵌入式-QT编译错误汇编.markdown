@@ -18,3 +18,7 @@ sudo apt-get install libgl1-mesa-dev
 sudo dpkg -i libgstreamer0.10-0_0.10.36-1.5_amd64.deb
 sudo dpkg -i libgstreamer-plugins-base0.10-0_0.10.36-2_amd64.deb
 ```
+
+#### 3、windows下编译release，提示“Can't find the name of Intel ICD OpenGL driver”  
+1）进入以下链接更新补丁  
+https://support.microsoft.com/en-us/help/4028443/windows-10-update-drivers
