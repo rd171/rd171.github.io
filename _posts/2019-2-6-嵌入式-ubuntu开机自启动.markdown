@@ -15,8 +15,9 @@ sudo su -
 chmod 777 /etc/rc.local
 ```  
 
+###### 3、rc.local中增加如下启动代码
 ```
-
+/mnt/hgfs/share/bimonitor/bin/ubuntu/BIRecorder
 ```
 
 ###### 2、执行如下命令拷贝sh文件  
