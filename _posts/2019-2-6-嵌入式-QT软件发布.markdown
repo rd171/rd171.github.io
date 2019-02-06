@@ -1,0 +1,22 @@
+﻿---
+layout: post
+title:  "嵌入式-QT软件发布"
+date:   2019-1-31 9:9:00 +0200
+categories: 嵌入式
+---
+
+###### QT软件发布    
+###### 1、Windows发布    
+####### 1.1、打开Qt 5.2.1 32-bit for Desktop (MSVC 2012)进入命令窗口  
+####### 1.2、进入QT编译好的执行程序所在目录  
+####### 1.3、使用如下命令生成需要的库文件  
+```
+windeployqt yourappname.exe
+```
+###### 2、Ubuntu发布    
+####### 2.1、打开Qt 5.2.1 32-bit for Desktop (MSVC 2012)进入命令窗口  
+####### 2.2、进入QT编译好的执行程序所在目录  
+####### 2.3、使用如下命令生成需要的库文件  
+```
+windeployqt yourappname.exe
+```
