@@ -9,6 +9,10 @@ categories: 嵌入式
 ```
 sudo su -
 ```
+##### 把当前目录下的BIRecorder文件拷贝到/usr/local目录(区分大小写)
+```
+cp BIRecorder /usr/local
+```
 
 ##### 查看当前路径  
 ```
