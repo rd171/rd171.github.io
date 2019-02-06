@@ -1,0 +1,22 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu开机自启动."
+date:   2019-2-6 22:06:00 +0200
+categories: 嵌入式
+---
+
+###### 步骤如下      
+###### 1、执行如下命令切换为root账户  
+```
+sudo su -
+```
+###### 2、执行如下命令拷贝sh文件  
+```
+cd /
+cd /mnt/hgfs/share/bimonitor/bin/ubuntu
+mv bi_services.sh /etc/init.d
+cd /
+cd /etc/init.d
+chmod 777 bi_services.h
+update-rc.d bi_serviecs.sh defaults 90
+```
