@@ -19,6 +19,11 @@ cp BIRecorder /usr/local
 ls /var/crash/
 ```
 
+##### 查看软件myApp依赖库  
+```
+ ldd myApp
+```
+
 ##### 查看当前路径  
 ```
 pwd
