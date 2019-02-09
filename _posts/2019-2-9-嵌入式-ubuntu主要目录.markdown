@@ -1,0 +1,22 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu主要目录"
+date:   2019-2-9 12:54:00 +0200
+categories: 嵌入式
+---
+
+###### ubuntu主要目录      
+###### 1、程序崩溃日志  
+```
+/var/crash/
+```
+
+###### 2、home目录  
+```
+ ~/
+```
+
+###### 3、安装程序快捷方式目录  
+```
+ /usr/share/applications
+```
