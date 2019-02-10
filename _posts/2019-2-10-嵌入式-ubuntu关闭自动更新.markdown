@@ -1,0 +1,12 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu关闭自动更新"
+date:   2019-2-10 11:59:00 +0200
+categories: 嵌入式
+---
+
+###### ubuntu关闭自动更新      
+###### 1、在任务栏进入System Settings   
+###### 2、进入Software&Updates  
+###### 3、进入Updates选项卡  
+      
