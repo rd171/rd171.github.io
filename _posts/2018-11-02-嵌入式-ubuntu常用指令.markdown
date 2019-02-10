@@ -14,6 +14,11 @@ sudo su -
 cp BIRecorder /usr/local
 ```
 
+##### 把当前目录下的BIRecorder文件夹及其子文件夹拷贝到/usr/local目录(区分大小写)
+```
+cp -r BIRecorder /usr/local
+```
+
 ##### 查看软件崩溃信息  
 ```
 ls /var/crash/
