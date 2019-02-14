@@ -1,0 +1,16 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu 14.04右键菜单中添加Open in Terminal"
+date:   2019-2-14 19:30:00 +0200
+categories: 嵌入式
+---
+
+###### ubuntu 14.04右键菜单中添加Open in Terminal      
+###### 1.打开一个Terminal（ctrl+alt+t），输入如下指令  
+```
+sudo apt-get install nautilus-open-terminal
+```    
+###### 2.使用以下指令来重启Nautilus  
+```
+nautilus -q
+```
