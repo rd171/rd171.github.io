@@ -12,9 +12,13 @@ categories: 嵌入式
 sudo su -
 ```
 ###### 3、cd进入qt-opensource-linux-x64-5.2.1.run程序所在目录  
-###### 4、执行如下命令进行安装  
+###### 4、执行如下命令更改安装包权限  
+```
+chmod 777 qt-opensource-linux-x64-5.2.1.run
+```
+###### 5、执行如下命令进行安装  
 ```
 sudo ./qt-opensource-linux-x64-5.2.1.run
 ```  
-###### 5、双击/opt/Qt5.2.1/Tools/QtCreator/bin/qtcreator运行QtCreator  
-###### 6、在任务栏上右键点击QtCreator，选择“Lock to Launcher”  
+###### 6、双击/opt/Qt5.2.1/Tools/QtCreator/bin/qtcreator运行QtCreator  
+###### 7、在任务栏上右键点击QtCreator，选择“Lock to Launcher”  
