@@ -95,3 +95,11 @@ sudo route add default gw 192.168.1.1 dev eth0
 编辑/etc/resolv.conf文件，增加
 nameserver 202.106.0.20
 ```
+##### 将设备/dev/sdb1挂载到/mnt目录
+```
+mount /dev/sdb1 /mnt
+```
+##### 卸载已挂载的设备/dev/sdb1
+```
+umount /dev/sdb1
+```
