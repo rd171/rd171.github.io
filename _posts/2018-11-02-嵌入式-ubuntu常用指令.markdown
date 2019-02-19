@@ -103,3 +103,7 @@ mount /dev/sdb1 /mnt
 ```
 umount /dev/sdb1
 ```
+##### 建立链接
+```
+sudo ln ‐s /opt/Qt/Tools/QtCreator/bin/qtcreator.sh /usr/bin/qtcreator.sh
+```
