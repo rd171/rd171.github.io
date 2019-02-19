@@ -107,3 +107,7 @@ umount /dev/sdb1
 ```
 sudo ln ‐s /opt/Qt/Tools/QtCreator/bin/qtcreator.sh /usr/bin/qtcreator.sh
 ```
+##### 更改文件夹权限(-R可解除文件及文件夹上的小锁)  
+```
+chmod -R 777 Qt5.2.1
+```
