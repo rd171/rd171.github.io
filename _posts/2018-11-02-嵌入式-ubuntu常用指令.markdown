@@ -18,6 +18,10 @@ cp BIRecorder /usr/local
 ```
 cp -r BIRecorder /usr/local
 ```
+##### 将abc重命名为1234
+```
+mv abc 1234
+```
 
 ##### 查看软件崩溃信息  
 ```
