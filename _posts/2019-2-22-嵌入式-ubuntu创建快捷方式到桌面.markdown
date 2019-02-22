@@ -18,17 +18,10 @@ sudo vim  /usr/share/applications/QtCreator.desktop
 ###### 4.在新建文件里加入例如以下内容并保存：
 ```
 [Desktop Entry]
-Encoding=UTF-8
-Name=QtCreator  
-Comment=Qt IDE  
-Exec=/opt/Qt/Tools/QtCreator/bin/qtcreator
-Icon=/usr/share/applications/Qt Creator
-Terminal=false  
-StartupNotify=true  
-Type=Application  
-Categories=Application;Development;
+Name=QtCreator
+Exec=sh /opt/Qt/Tools/QtCreator/bin/qtcreator.sh
+Icon=/opt/Qt/Examples/Qt-5.9.6/winextras/musicplayer/images/qt-logo.ico
+Type=Application
+StartupNotify=true
 ```
-Exec:代表应用程序的位置  
-Icon:代表应用程序图标的位置  
-Terminal:的值为false表示启动时不启动命令行窗体，值为true表示启动命令行窗体  
-Categories:这里的内容决定创建出的启动器在应用程序菜单中的位置，依照上面的写法创建的启动器将出如今应用程序－Internet中，以此类推，假设想在应用程序－办公中创建起启器，上述最后一行应该写成：Categories=Application;Office;  
+###### 5.将/usr/share/applications/QtCreator.desktop拷贝到桌面即可  
