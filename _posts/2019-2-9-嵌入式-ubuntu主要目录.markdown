@@ -15,8 +15,11 @@ categories: 嵌入式
 ```
  ~/
 ```
-
 ###### 3、安装程序快捷方式目录  
 ```
  /usr/share/applications
+```
+###### 4、桌面目录  
+```
+ ~/Desktop
 ```
