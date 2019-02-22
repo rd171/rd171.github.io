@@ -1,0 +1,18 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu桌面无法创建文件问题修改"
+date:   2019-2-22 19:30:00 +0200
+categories: 嵌入式
+---
+
+###### 嵌入式-ubuntu桌面无法创建文件问题修改      
+###### 使用下列命令在线修复  
+```
+sudo apt-get install lightdm
+
+sudo apt-get install ubuntu-desktop
+
+sudo apt-get install unity
+
+sudo service lightdm restart
+```
