@@ -17,5 +17,8 @@ xz-utils debianutils iputils-ping libsdl1.2-dev xterm
 ```
 sudo dpkg --configure -a
 sudo apt install chrpath
+sudo apt install gawk
+sudo apt install git
+sudo apt install texinfo
 chrpath gawk git makeinfo
 ```
