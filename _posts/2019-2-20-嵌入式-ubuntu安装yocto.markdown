@@ -7,7 +7,7 @@ categories: 嵌入式
 
 ###### 嵌入式-ubuntu安装yocto      
 ###### 1.安装ubuntu 16.04预留120G空间，推荐2G内存  
-###### 2.更新
+###### 2.更新（不成功多试几次）
 ```
 sudo apt-get install gawk wget git-core diffstat unzip texinfo gcc-multilib \
 build-essential chrpath socat cpio python python3 python3-pip python3-pexpect \
