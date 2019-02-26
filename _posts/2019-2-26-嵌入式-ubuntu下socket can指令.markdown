@@ -26,3 +26,15 @@ ip link set can0 down
 ```
 ip link set can0 up type can bitrate 1000000
 ```
+###### 打开设备can0
+```
+ip link set can0 up
+```
+###### 设备can0接收数据(按CTRL + C终止接收)
+```
+candump can0
+```
+###### 设备can0发送数据(帧ID为:123，数据为:abcd,帧格式为标准)
+```
+cansend can0 123#abcd
+```
