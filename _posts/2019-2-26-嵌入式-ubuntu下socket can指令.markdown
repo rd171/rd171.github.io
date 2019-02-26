@@ -34,7 +34,15 @@ ip link set can0 up
 ```
 candump can0
 ```
-###### 设备can0发送数据(帧ID为:123，数据为:abcd,帧格式为标准)
+###### 设备can0发送数据(帧ID为:123，数据为:abcd,帧格式为:标准,帧类型:数据帧)
 ```
 cansend can0 123#abcd
+```
+###### 设备can0发送数据(帧ID为:12300000，数据为:abcd,帧格式为:扩展帧,帧类型:数据帧)
+```
+cansend can0 12300000#abcd
+```
+###### 设备can0发送数据(帧ID为:123，数据为:abcd,帧格式为:标准帧,帧类型:远程帧)
+```
+cansend can0 123#Rabcd
 ```
