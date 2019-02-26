@@ -16,4 +16,13 @@ ip link set can0 type can
 ###### 查看can0的状态  
 ```
 ip -details -statistics link show can0
-```      
+```    
+###### 关闭设备can0
+```
+ip link set can0 down
+```
+
+###### 设置设备can0波特率为1Mbit/s
+```
+ip link set can0 up type can bitrate 1000000
+```
