@@ -115,3 +115,7 @@ sudo ln ‐s /opt/Qt/Tools/QtCreator/bin/qtcreator.sh /usr/bin/qtcreator.sh
 ```
 chmod -R 777 Qt5.2.1
 ```
+##### 查看磁盘剩余空间    
+```
+df -h
+```
