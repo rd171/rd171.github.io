@@ -88,6 +88,10 @@ kill 9 PID
 ```
 sudo ifconfig eth0 192.168.1.100 broadcast 192.168.1.255 netmask 255.255.255.0
 ```
+或
+```
+vi /lib/systemd/network/10-eth0.network
+```
 
 ##### 修改网关
 ```
