@@ -1,0 +1,48 @@
+﻿---
+layout: post
+title:  "嵌入式-linux配置服务"
+date:   2019-03-12 19:04:00 +0200
+categories: matlab
+---
+#### 1、在/lib/systemd/system目录下新建bm-recorder.service文件
+```
+[Unit]
+Description=Autostart Qt 5 Demo
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/bin/qtLauncher /opt/bmrecorder/bin/bmrecorder
+
+# Detach the framebuffer console from fb0 before starting the QtDemo and
+# reattach it after QtDemo has stopped.
+# See <linux>/Documentation/fb/fbcon.txt for details.
+# NOTE: The dash "-" allows the commands to fail, e.g. if no virtual console
+# was started.
+# FIXME Is there a better command without shell invocation?
+ExecStartPre=-/bin/sh -c "echo 0 > /sys/devices/virtual/vtconsole/vtcon1/bind"
+ExecStopPost=-/bin/sh -c "echo 1 > /sys/devices/virtual/vtconsole/vtcon1/bind; echo -n -e '\033[9;0]' > /dev/tty0"
+
+[Install]
+WantedBy=multi-user.target
+```
+#### 2、将bmrecorder程序拷贝到/opt/bmrecorder/bin/目录
+#### 3、为bmrecorder程序配置权限  
+```
+chmod 777 /opt/bmrecorder/bin/bmrecorder
+```
+#### 4、重启systemctl系统服务和允许bm-recorder.service
+```
+systemctl daemon-reload
+systemctl enable bm-recorder.service
+```
+#### 5、重启验证
+```
+reboot
+```
+#### 6、查找bm-recorder.service的状态
+```
+systemctl status bm-recorder.service
+```
