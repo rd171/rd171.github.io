@@ -1,0 +1,15 @@
+﻿---
+layout: post
+title:  "嵌入式-ubuntu16.04中使用搜狗输入法Qt5无法输入中文解决方式"
+date:   2019-03-18 19:04:00 +0200
+categories: matlab
+---
+#### 1、安装fcitx-frontend-qt5
+```
+sudo apt-get install fcitx-frontend-qt5
+```
+#### 2、将libfcitxplatforminputcontextplugin.so复制到QtCreator相应目录下
+```
+sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/* /opt/Qt/Tools/QtCreator/lib/Qt/plugins
+```
+#### 3、重新打开Qt Creator即可
