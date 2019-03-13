@@ -1,0 +1,11 @@
+﻿---
+layout: post
+title:  "phytec-开发板QT显示汉字"
+date:   2019-03-18 19:04:00 +0200
+categories: matlab
+---
+#### 1、保证Ubuntu电脑已经安装了中文字库，以wqy-microhei字体为例，若在/usr/share/fonts/truetype/wqy/下无该字库，则输入：
+```
+sudo apt-get install ttf-wqy-microhei
+```
+#### 2、将电脑中的/usr/share/fonts/truetype/wqy/wqy-microhei.ttc 放入开发板的/usr/lib/fonts/文件夹下。并输入export QT_QWS_FONTDIR=/usr/lib/fonts
