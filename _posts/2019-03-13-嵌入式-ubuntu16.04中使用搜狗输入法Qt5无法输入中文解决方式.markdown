@@ -10,6 +10,6 @@ sudo apt-get install fcitx-frontend-qt5
 ```
 #### 2、将libfcitxplatforminputcontextplugin.so复制到QtCreator相应目录下
 ```
-sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/* /opt/Qt/Tools/QtCreator/lib/Qt/plugins
+sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/* /opt/Qt/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts
 ```
 #### 3、重新打开Qt Creator即可
