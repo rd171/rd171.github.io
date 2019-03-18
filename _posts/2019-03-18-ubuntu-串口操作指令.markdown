@@ -1,0 +1,14 @@
+﻿---
+layout: post
+title:  "ubuntu-串口操作指令"
+date:   2019-03-18 19:15:00 +0200
+categories: ubuntu
+---
+#### 1、查看串口设备
+```
+ls -l ttyS*
+```
+#### 2、向串口0发送数据
+```
+echo hello world! > /dev/ttyS0
+```
