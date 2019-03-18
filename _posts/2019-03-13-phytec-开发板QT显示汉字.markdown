@@ -9,3 +9,4 @@ categories: matlab
 sudo apt-get install ttf-wqy-microhei
 ```
 #### 2、将电脑中的/usr/share/fonts/truetype/wqy/wqy-microhei.ttc 放入开发板的/usr/lib/fonts/文件夹下。并输入export QT_QWS_FONTDIR=/usr/lib/fonts
+#### 3、将
