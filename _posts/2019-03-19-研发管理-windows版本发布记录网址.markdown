@@ -4,5 +4,6 @@ title:  "Windows版本发布记录网址"
 date:   2019-03-19 19:00:00 +0200
 categories: 研发管理
 ---
-#### Windows 10 和 Windows Server 2019 更新历史记录
+#### [Windows 10 和 Windows Server 2019 更新历史记录]
+
 [Windows 10 和 Windows Server 2019 更新历史记录]:https://support.microsoft.com/zh-cn/help/4464619/windows-10-update-history
