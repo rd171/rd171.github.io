@@ -1,0 +1,30 @@
+﻿---
+layout: post
+title:  "防溢出求平均算法"
+date:   2019-03-22 19:00:00 +0200
+categories: 算法
+---
+#### 输入i个x，求其平均数avg。
+#### 算法1：x+= (x-avg)/i;
+#### 算法2：sum+=x, avg=sum/i;
+```
+#include <iostream>
+using namespace std;
+int main()
+{
+	double x,avg = 0;
+	for (int i = 1; scanf("%lf", &x) == 1; ++i)
+	{
+		avg += (x - avg) / i;
+	}
+	printf("%lf\n",avg);
+	return 0;
+}
+```
+证明
+
+Avg[i] = Avg[i-1] + (X[i] - Avg[i-1])/i //很容易理解  
+= (X[i] + (i-1)*Avg[i-1])/i //提取因子  
+===> i*Avg[i] = X[i] + (i-1)*Avg[i-1] //移项i  
+===> n * Avg[n] = ∑X[i]{i,1,n} //累加结果  
+===> Avg[n] = ∑X[i] / n //done  
