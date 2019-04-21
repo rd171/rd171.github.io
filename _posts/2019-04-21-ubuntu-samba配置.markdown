@@ -41,7 +41,11 @@ sudo useradd smbuser
 sudo smbpasswd -a smbuser
 sudo service smbd restart
 ```
-#### 8、访问共享名为myshare的共享目录
+#### 8、查看ubuntu系统中的ip
+```
+ifconfig
+```
+#### 9、用第8步中的ip访问共享名为myshare的共享目录，用户名为smbuser
 ```
 在"运行"窗口中输入"\\192.168.1.4"-->回车-->双击打开myshare-->回车-->输入用户名和密码-->回车-->访问成功。
 ```
