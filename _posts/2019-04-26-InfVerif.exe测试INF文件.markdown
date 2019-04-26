@@ -1,0 +1,27 @@
+﻿---
+layout: post
+title:  "InfVerif.exe测试INF文件"
+date:   2019-04-26 19:54:00 +0200
+categories: sql server
+---
+#### 1、在Win 10安装WDK
+```
+https://docs.microsoft.com/zh-cn/windows-hardware/drivers/other-wdk-downloads
+```
+#### 2、在安装目录找到InfVerif.exe,例如如下路径
+```
+C:\Program Files (x86)\Windows Kits\10\Tools\x64
+```
+#### 3、在Cmd窗口中执行如下指令
+```
+C:\Users\Delica>"C:\Program Files (x86)\Windows Kits\10\Tools\x64\infverif.exe" /u D:\wdk\exe_free\EegNsdDriver.Inf
+```
+#### 4、显示如下测试结果
+```
+ERROR(1209) in D:\wdk\exe_free\EegNsdDriver.Inf, line 22: Section [manufacturer] is defined multiple times.
+ERROR(1235) in D:\wdk\exe_free\EegNsdDriver.Inf, line 23: String token 'Delicate' not defined in [Strings] section - if intending to use a literal '%' in a string, use '%%' instead.
+WARNING(2010) in D:\wdk\exe_free\EegNsdDriver.Inf, line 33: Section [SECTION_0] should have '.NTx86' decoration.
+WARNING(2083) in D:\wdk\exe_free\EegNsdDriver.Inf, line 36: Section [precopysection] not referenced or used.
+WARNING(2083) in D:\wdk\exe_free\EegNsdDriver.Inf, line 43: Section [eegnsdusb.dev] not referenced or used.
+WARNING(1252) in D:\wdk\exe_free\EegNsdDriver.Inf, line 52: Cannot add service 'EegNsdUsb' with StartType=2 and ServiceType=1 (AUTO_START).
+```
