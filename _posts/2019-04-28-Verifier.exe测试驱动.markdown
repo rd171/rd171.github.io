@@ -2,7 +2,7 @@
 layout: post
 title:  "Verifier.exe测试驱动"
 date:   2019-04-28 20:09:00 +0200
-categories: sql server
+categories: Driver
 ---
 #### 1、在Win 10运行窗口中输入verifier
 ```
