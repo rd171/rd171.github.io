@@ -1,0 +1,12 @@
+﻿---
+layout: post
+title:  "Verifier.exe无限蓝屏解决方案"
+date:   2019-04-29 20:09:00 +0200
+categories: sql server
+---
+#### 原因  
+开启verifier后，测试项有蓝屏，导致无限循环蓝屏，方法是关闭verifier，通过删除注册表键值即可。  
+#### 步骤    
+##### 1、按F8进入安全模式  
+##### 2、运行中输入regedit打开注册表   
+##### 3、在注册表中搜索VerifyDrivers和VerifyDriverLevel两个键值并删除
