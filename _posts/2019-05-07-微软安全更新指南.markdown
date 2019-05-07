@@ -7,4 +7,4 @@ categories: 系统
 [微软安全更新指南]
 
 
-[微软安全更新指南]:https://www.internic.net/
+[微软安全更新指南]:https://portal.msrc.microsoft.com/zh-cn/security-guidance
