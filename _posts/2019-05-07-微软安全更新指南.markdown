@@ -1,10 +1,15 @@
 ﻿---
 layout: post
-title:  "微软安全更新指南"
+title:  "微软常用网址导航"
 date:   2019-05-07 19:00:00 +0200
 categories: 系统
 ---
-[微软安全更新指南]
+[1、微软安全更新指南]  
+
+[2、Windows 生命周期说明书]
 
 
-[微软安全更新指南]:https://portal.msrc.microsoft.com/zh-cn/security-guidance
+[1、微软安全更新指南]:https://portal.msrc.microsoft.com/zh-cn/security-guidance
+
+
+[2、Windows 生命周期说明书]:https://support.microsoft.com/zh-cn/help/13853/windows-lifecycle-fact-sheet
