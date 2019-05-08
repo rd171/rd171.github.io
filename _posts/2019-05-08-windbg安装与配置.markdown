@@ -1,0 +1,25 @@
+﻿---
+layout: post
+title:  "windbg安装与配置"
+date:   2019-05-08 19:00:00 +0200
+categories: 系统
+---
+#### 安装  
+从WIN 8以后windbg打包在WDK里了，安装WDK会同步安装，安装WIN 10系统的WDK后，windbg目录会在
+从WIN 8以后windbg打包在WDK里了，安装WDK会同步安装，安装WIN 10系统的WDK到E盘后，windbg.exe会在E:\Windows Kits\10\Debuggers\x64目录。windbg版本一定要对，否则配置符号容易不成功。
+#### 配置符号
+依次打开:File -> Symbol File Path ... 输入符号路径如下：    
+```
+D:\EEG_DRIVER\objchk_win7_amd64\amd64\Eeg90Usb.pdb;SRV*c:\Symbols* http://msdl.microsoft.com/download/symbols
+```
+其中“D:\EEG_DRIVER\objchk_win7_amd64\amd64\Eeg90Usb.pdb”是崩溃软件或驱动编译时产生的用于调试的文件。  
+
+“SRV*c:\Symbols* http://msdl.microsoft.com/download/symbols”表示从微软网站下载所需的符号文件到c:\Symbols目录  
+
+注意：路径与路径之间用分号隔开  
+
+#### 配置源码
+依次打开:File -> Source File Path ... 输入源码所在路径如下：
+```
+D:\EEG_DRIVER
+```
