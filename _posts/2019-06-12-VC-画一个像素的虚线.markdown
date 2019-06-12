@@ -1,0 +1,15 @@
+﻿---
+layout: post
+title:  "VC-画一个像素的虚线"
+date:   2019-06-12 19:00:00 +0200
+categories: VC
+---
+#### 构造一个像素的虚线画笔  
+```
+CPen m_penGrid;
+m_corGrid = RGB(255, 0, 255);
+LOGBRUSH LogBrush;
+LogBrush.lbColor = m_corGrid;
+LogBrush.lbStyle = PS_SOLID;
+m_penGrid.CreatePen( PS_COSMETIC | PS_ALTERNATE , 1, &LogBrush, 0, NULL );
+```
