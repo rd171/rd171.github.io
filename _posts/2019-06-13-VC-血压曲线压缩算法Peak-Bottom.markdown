@@ -12,10 +12,10 @@ categories: VC
 
 #### 代码
 ```
-class CPeakBottomFilter
+class CPBFilter
 {
 public:
-	CPeakBottomFilter()
+	CPBFilter()
 	{
 		m_bLocalFirst = true;
 		m_bWholeFirst = true;
