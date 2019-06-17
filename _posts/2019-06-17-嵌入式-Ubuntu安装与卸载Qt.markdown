@@ -1,0 +1,32 @@
+﻿---
+layout: post
+title:  "嵌入式-Ubuntu安装与卸载Qt"
+date:   2019-06-17 19:00:00 +0200
+categories: VC
+---
+#### QT安装  
+##### 方法1
+命令行直接安装  
+```
+sudo apt-get install qt5-default qtcreator
+```
+##### 方法2
+去Qt官网下载最新版本的.run安装文件  
+```
+chmod +x ***.run
+sudo ./***.run
+```
+#### QT卸载  
+##### 方法1卸载
+```
+sudo apt-get remove qt5-default qtcreator
+```
+##### 方法2卸载
+找到Qt的安装目录，我的默认目录如下（如果不记得路径，可以再运行.run去看默认路径）
+```
+opt/Qt5.2.1
+```
+运行MaintenanceTool
+```
+sudo ./MaintenanceTool
+```
