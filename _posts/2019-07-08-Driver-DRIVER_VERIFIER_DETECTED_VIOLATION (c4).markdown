@@ -18,7 +18,8 @@ Arg3: 0000000000000000, Pool Type.
 Arg4: 0000000000000000, Pool Tag (if provided).   
 
 #### 原因
-https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/wdm/ne-wdm-_pool_type    
+https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/wdm/ne-wdm-_pool_type   
+    
 Starting with Windows 8, drivers should allocate most or all of their nonpaged memory from the no-execute (NX) nonpaged pool instead of the executable nonpaged pool. For more information, see the description of the NonPagedPoolNx pool type.     
 
 #### 方法
