@@ -6,8 +6,8 @@ categories: Driver
 ---
 #### 错误
 
-DRIVER_VERIFIER_IOMANAGER_VIOLATION (c9)   
-The IO manager has caught a misbehaving driver.   
+DRIVER_VERIFIER_IOMANAGER_VIOLATION (c9)      
+The IO manager has caught a misbehaving driver.      
 Arguments:   
 Arg1: 0000000000000233, The version field of the query capabilities structure in a query capabilities IRP was not properly initialized.   
 Arg2: fffff80237bca1c9, The address in the driver's code where the error was detected.   

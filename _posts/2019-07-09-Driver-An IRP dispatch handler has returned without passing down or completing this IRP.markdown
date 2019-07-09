@@ -5,14 +5,13 @@ date:   2019-07-09 19:00:00 +0200
 categories: Driver
 ---
 #### 错误
-DRIVER_VERIFIER_IOMANAGER_VIOLATION (c9)
-The IO manager has caught a misbehaving driver.
-Arguments:
-Arg1: 0000000000000226, An IRP dispatch handler has returned without passing down or completing this IRP,
-	or someone forgot to return STATUS_PENDING.
-Arg2: fffff80bd7b982b0, The address in the driver's code where the error was detected.
-Arg3: ffff818c0aff4a60, IRP address.
-Arg4: 0000000000000000    
+DRIVER_VERIFIER_IOMANAGER_VIOLATION (c9)   
+The IO manager has caught a misbehaving driver.   
+Arguments:   
+Arg1: 0000000000000226, An IRP dispatch handler has returned without passing down or completing this IRP,	or someone forgot to return STATUS_PENDING.   
+Arg2: fffff80bd7b982b0, The address in the driver's code where the error was detected.   
+Arg3: ffff818c0aff4a60, IRP address.   
+Arg4: 0000000000000000       
 
 #### 方法
 ```
