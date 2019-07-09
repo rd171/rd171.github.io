@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "Driver-DRIVER_VERIFIER_DETECTED_VIOLATION (c4)."
+title:  "Driver-Code Integrity Issue: The caller specified an executable pool type. (Expected: NonPagedPoolNx)"
 date:   2019-07-08 19:00:00 +0200
 categories: Driver
 ---

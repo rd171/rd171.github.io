@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "Driver-Any PNP IRP must have its status initialized"
+title:  "Driver-A PNP IRP has an invalid status. Any PNP IRP must have its status initialized	to STATUS_NOT_SUPPORTED"
 date:   2019-07-08 19:00:00 +0200
 categories: Driver
 ---
