@@ -5,42 +5,9 @@ date:   2019-07-15 19:00:00 +0200
 categories: matlab
 ---
 
-波段|频率|状态|时间|
+波     段|频率|状态|时间|
 -|-|-|-  
 β脑波 |14~100Hz   | 紧张状态，对周围环境很敏感，但难于集中注意力，且容易疲劳。|绝大数人清醒时都处于这种状态。  
 α脑波 | 8~14Hz | 轻松状态下，大脑清醒放松，容易集中注意力学习、工作、不容易被外界事物干扰，大脑不易疲劳。| 一般人须经过长期训练才能自觉调节到α波状态，否则很难。  
 θ脑波 | 4~8Hz | 深度轻松状态，注意力高度集中,灵感涌现，创造力高涨| 一般人经过长期训练才能自觉调节到θ状态，否则很难。  
 δ脑波 |0.5~4Hz|睡眠状态|人在深睡状态下会出现
-
-<table border="1", width="260", align="center">
-<tr>
-   <td  align="center">波段</td>
-   <td  align="center">频率</td>
-   <td  align="center">状态</td>
-   <td  align="center">时间</td>
-</tr>
-<tr>
-    <td align="center">β脑波</td>
-    <td align="center">14~100Hz</td>
-    <td align="center">紧张状态，对周围环境很敏感，但难于集中注意力，且容易疲劳。</td>
-    <td align="center">绝大数人清醒时都处于这种状态。</td>
-</tr>
-<tr>
-    <td align="center">α脑波</td>
-    <td align="center">8~14Hz</td>
-    <td align="center">轻松状态下，大脑清醒放松，容易集中注意力学习、工作、不容易被外界事物干扰，大脑不易疲劳。</td>
-    <td align="center">一般人须经过长期训练才能自觉调节到α波状态，否则很难。</td>
-</tr>
-<tr>
-    <td align="center">θ脑波</td>
-    <td align="center">4~8Hz</td>
-    <td align="center">深度轻松状态，注意力高度集中,灵感涌现，创造力高涨。</td>
-    <td align="center">一般人经过长期训练才能自觉调节到θ状态，否则很难。</td>
-</tr>
-<tr>
-    <td align="center">δ脑波</td>
-    <td align="center">0.5~4Hz</td>
-    <td align="center">睡眠状态</td>
-    <td align="center">人在深睡状态下会出现</td>
-</tr>
-</table>
