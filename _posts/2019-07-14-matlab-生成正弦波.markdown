@@ -1,0 +1,25 @@
+﻿---
+layout: post
+title:  "matlab-生成正弦波"
+date:   2019-07-10 19:00:00 +0200
+categories: matlab
+---
+### 函数
+```
+function output = gen_sin( fs, fs1, times)
+% 生成正弦波
+% fs ：系统采样率
+% fs1：数据频率
+% times：周期数
+t=0:2*pi/(fs/fs1):2*pi;
+
+for i=1:fs/fs1:times*(fs/fs1)
+    output(i:i+fs/fs1) = sin(t);
+end
+end
+```
+### 调用
+```
+y = gen_sin(1000, 5, 2);
+plot(y);
+```
