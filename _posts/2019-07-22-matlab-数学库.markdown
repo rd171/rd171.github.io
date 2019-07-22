@@ -1,0 +1,16 @@
+﻿---
+layout: post
+title:  "matlab-数学库"
+date:   2019-07-22 19:00:00 +0200
+categories: matlab
+---
+
+库名|说明|
+-|-
+CGAL| CGAL ，计算几何算法库，是一个大型C + +库的几何数据结构和算法，如Delaunay三角网，网格生成，布尔运算的多边形，以及各种几何处理算法。 CGAL是用来在各个领域：计算机图形学，科学可视化，计算机辅助设计与建模，地理信息系统，分子生物学，医学影像学，机器人学和运动规划，和数值方法。下载网址 http://www.cgal.org/download.html  
+Octave| Octave 是一个类似matlab和Scilab的数学软件包，可以进行各种运算，编程。它还有丰富的C++接口可以让用户编程时调用。它绘图使用gnuplot。Octave的使用也是基于字符终端模式的，当需要绘图时，将会调用Gnuplot进行数据绘图，并显示出来。Octave是用C++编写的，它内容丰富的库也可以供用户在编写软件时调用。       Octave库的详细介绍在/usr/share/doc/octave-2.1.50/liboctave下，文件是liboctave.dvi，需要PDF文件的，可以运行： dvipdfm liboctave.dvi将dvi文件转换为PDF文件。Octave同时还支持Fortran等的调用，GSL绑定等。可以由用户定制自己的函数、子程序等。下载地址  http://octave.sourceforge.net/packages.html  
+TooN|TooN 是一个C++ 数学计算库，其目的是有效运作的大量小型矩阵，并提供方便一些算法包括矩阵分解和优化。下载地址http://mi.eng.cam.ac.uk/~er258/cvd/toon/html-user/index.html  
+OpenFEM|有限元分析，即使用有限元方法来分析静态或动态的物体或系统。在这种方法中一个物体或系统被分解为由多个相互联结的、简单、独立的点组成的几何模型。在这 种方法中这些独立的点的数量是有限的，因此被称为有限元。由实际的物理模型中推导出来得平衡方程式被使用到每个点上，由此产生了一个方程组。这个方程组可 以用线性代数的方法来求解。有限元分析的精确度无法无限提高。元的数目到达一定高度后解的精确度不再提高，只有计算时间不断提高。下载地址 http://sourceforge.net/projects/openfem/files/  
+ OOFEM|OOFEM 是一个开源多物理并行有限元程序的面向对象的架构。这个项目的目的是提供高效率和强大的有限元计算工具，以及提供高度模块化和可扩展性的发展环境。有限元分析通常借助计算机软件完成，著名工程软件有：MSC.Nastran、ADINA、LS-DYNA、ANSYS、ABAQUS、2D-sigma等。下载地址  http://www.oofem.org/en/download/download.html  
+ GiNaC| GiNaC（GiNaC 不是一个 CAS 计算机代数系统））是一个用于符号计算的C++库。它的设计允许集成系统创造，象征性的操作嵌入与更成熟的计算机科学（如计算密集型，图形界面等），数字应用领域。相对于其他情况下，它不会尝试代数提供广泛的功能和简单的编程语言，而是接受一个给定语言（C + +）和扩展了代数功能设置。下载地址 http://www.ginac.de/Download.html  
+ EngLab|EngLab是一个类C的数学专用语言。它语法简单，关键字很少，工程师和那些只会少许编程知识的人便能很好的掌握。下载地址http://sourceforge.net/projects/englab/files/  
