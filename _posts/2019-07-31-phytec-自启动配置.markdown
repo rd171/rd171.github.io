@@ -1,0 +1,12 @@
+﻿---
+layout: post
+title:  "phytec-自启动配置"
+date:   2019-07-31 19:00:00 +0200
+categories: phytec
+---
+
+### 服务目录
+/etc/systemd/system/multi-user.target.wants/phytec-qtdemo.service
+
+### 启动路径
+ExecStart=/usr/bin/qtLauncher /usr/bin/QtDemo
