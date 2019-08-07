@@ -1,0 +1,7 @@
+﻿---
+layout: post
+title:  "windows-win10查看系统版本号"
+date:   2019-08-07 19:00:00 +0200
+categories: phytec
+---
+桌面空白处右键 -> Personalize -> Home -> System -> About
