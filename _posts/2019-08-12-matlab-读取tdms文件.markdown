@@ -44,4 +44,6 @@ data3 = struct2mat(data3);
 当你使用save保存数据后，需要使用load指令上传数据，上传的数据是一个1*1的结构体，需要转换成mat格式方便数据处理。
 
 ### 代码获取方法
+[convertTDMS]
+
 [convertTDMS]:/20190812matlab-读取tdms文件/ConvertTDMS.rar
