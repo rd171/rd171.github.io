@@ -11,7 +11,7 @@ categories: matlab
 
 ### 2、解决方案  
 1、将文件/etc/systemd/system/multi-user.target.wants/phytec-qtdemo.service中启动文件改为自己要自启动的，如下：
-、、、
+```
 [Unit]
 Description=Autostart Qt 5 Demo
 Wants=systemd-udev-settle.service
@@ -35,5 +35,5 @@ ExecStopPost=-/bin/sh -c "echo 1 > /sys/devices/virtual/vtconsole/vtcon1/bind; e
 [Install]
 WantedBy=multi-user.target
 
-、、、、在
+```
 2、在文件/etc/systemd/system/multi-user.target.wants/phytec-qtdemo.service中增加WorkingDirectory，并设置为启动程序目录。
