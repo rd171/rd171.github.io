@@ -1,0 +1,39 @@
+﻿---
+layout: post
+title:  "phytec-开机自启动问题"
+date:   2019-08-23 19:00:00 +0200
+categories: matlab
+---
+
+### 1、问题  
+1、 无法自启动  
+2、 启动时无法加载外部字体和图片
+
+### 2、解决方案  
+1、将文件/etc/systemd/system/multi-user.target.wants/phytec-qtdemo.service中启动文件改为自己要自启动的，如下：
+、、、
+[Unit]
+Description=Autostart Qt 5 Demo
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/usr/bin/
+ExecStart=/usr/bin/BM
+
+# Detach the framebuffer console from fb0 before starting the QtDemo and
+# reattach it after QtDemo has stopped.
+# See <linux>/Documentation/fb/fbcon.txt for details.
+# NOTE: The dash "-" allows the commands to fail, e.g. if no virtual console
+# was started.
+# FIXME Is there a better command without shell invocation?
+ExecStartPre=-/bin/sh -c "echo 0 > /sys/devices/virtual/vtconsole/vtcon1/bind"
+ExecStopPost=-/bin/sh -c "echo 1 > /sys/devices/virtual/vtconsole/vtcon1/bind; echo -n -e '\033[9;0]' > /dev/tty0"
+
+[Install]
+WantedBy=multi-user.target
+
+、、、、在
+2、在文件/etc/systemd/system/multi-user.target.wants/phytec-qtdemo.service中增加WorkingDirectory，并设置为启动程序目录。
