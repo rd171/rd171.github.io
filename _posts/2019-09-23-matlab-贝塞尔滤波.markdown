@@ -1,0 +1,20 @@
+﻿---
+layout: post
+title:  "matlab-贝塞尔滤波"
+date:   2019-09-23 19:00:00 +0200
+categories: matlab
+---
+
+```
+%1、 随机生成1000Hz的数据x
+Fs = 1000;
+t = linspace(0,1,Fs);
+x = cos(2*pi*82*t)+0.5*randn(size(t)); %做模拟时将82改为round(rand*100)
+% 2、建立5阶，截止频率128 Hz的滤波器，得到系数b、a
+[b,a] = besself(10,128);
+% 3、将模拟滤波器转换为数字滤波器,得到num、den
+[num,den] = bilinear(b,a,128);
+% 4、滤波
+x_filtered = filter(num,den,x);
+plot(x);hold on; plot(x_filtered,'r');legend('original signal','denoised signal')
+```
