@@ -6,20 +6,40 @@ categories: matlab
 ---
 ### 函数
 ```
-function output = gen_sin( fs, fs1, times)
+function output = gen_sin( fs, fs1, time)
 % 生成正弦波
-% fs ：系统采样率
-% fs1：数据频率
-% times：周期数
+% fs ：系统采样率（Hz）
+% fs1：数据频率（Hz）
+% time;时间(ms)
 t=0:2*pi/(fs/fs1):2*pi;
-
-for i=1:fs/fs1:times*(fs/fs1)
-    output(i:i+fs/fs1) = sin(t);
-end
+temp = sin(t);
+ampl = NaN;
+len = length(temp)-1;
+j = 1;
+    for i=1:1:round(time*fs/1000)
+        if ( j > len )
+            j = 1;
+        end
+        ampl(i) = temp(j);
+        j = j + 1;
+        end
+ output = ampl;
 end
 ```
 ### 调用
 ```
-y = gen_sin(1000, 5, 2);
+clear all;
+close all;
+fs = 1000;
+fs1= 5;
+times = 2000;
+y = gen_sin(fs, fs1, times);
+figure(1);
 plot(y);
+
+ampl = abs(fft(y)/length(y));
+f = 0:fs/length(ampl):fs;
+f = f(1:length(ampl));
+figure(2);
+plot(f, ampl);
 ```
