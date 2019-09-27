@@ -1,0 +1,68 @@
+﻿---
+layout: post
+title:  "matlab-色阶与颜色映射"
+date:   2019-09-27 19:00:00 +0200
+categories: matlab
+---
+
+```
+close all;
+clc;
+
+% dop基础增益dB
+dop_gain_base = 25;
+% 软件中数字增益dB（即软件中的参数gain）
+dop_gain_offset = 18;
+% dop增益dB
+dop_gain_db = dop_gain_base + dop_gain_offset;
+% dop增益
+dop_gain_ampl = power(10, dop_gain_db/20);
+
+% 分析范围 dB
+db_range= 50;
+% 色条阶数
+color_len = 128;
+% 平均每阶对应的强度
+db_gap = db_range/(color_len);
+% 平均每阶对应的幅度值
+ampl_step = power(10, db_gap/20);
+% ad位数2^11
+ad = 2048;
+for i=0:color_len-1
+    % 分析范围内的幅值映射曲线  
+    rang_curve(i+1) = power(ampl_step, i);
+    % 将分析范围曲线缩放到实际信号量程范围
+    ampl_curve(i+1) = ad/rang_curve(i+1);
+    % 将分析范围曲线缩放到实际信号量程范围后做增益
+    ampl_gain_curve(i+1) = ampl_curve(i+1)/dop_gain_ampl;
+end
+
+x = 0:color_len-1;
+figure(1);
+hold on;
+% plot(x, 0:ampl_step:ampl_step*(color_len-1), 'b', x, 0:ampl_step:ampl_step*(color_len-1) , 'rx');
+plot(x, rang_curve, 'b', x, rang_curve , 'rx');
+xlabel('色阶范围0~127阶');
+ylabel('18dB对应的幅度=power(10, 18/20)≈7.94');
+title('分析范围颜色映射曲线');
+hold off;
+grid on;
+
+figure(2);
+plot(x, ampl_curve, 'b', x, ampl_curve , 'rx');
+title('分析范围颜色映射曲线缩放到实际信号量程范围');
+xlabel('色阶范围0~127阶');
+ylabel('ad值范围(11位)=power(2, 11)=2048');
+grid on;
+
+figure(3);
+plot(x, ampl_gain_curve, 'b', x, ampl_gain_curve , 'rx');
+title('将分析范围曲线缩放到实际信号量程范围后做增益');
+xlabel('色阶范围0~127阶');
+ylabel('ad值范围(11位）=power(2, 11)/gain');
+grid on;
+
+% 如果a的x次方等于N（a>0，且a不等于1），那么数x叫做以a为底N的对数（logarithm），记作x=logaN。其中，a叫做对数的底数，N叫做真数。
+% a^x = N; x= logaN
+% 10^x = N; x =logN
+```
