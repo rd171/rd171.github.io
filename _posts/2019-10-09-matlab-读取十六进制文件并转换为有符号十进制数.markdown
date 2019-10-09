@@ -114,9 +114,13 @@ function decval=hex2decWithSign(hexval, length)
 % 功能:十六进制转有符号的十进制
 % hexval:十六进制数
 % length:十六进制数位数，例如hexval=f9a220,则length应为6
+% 1、十六进制转十进制
 decval = hex2dec(hexval);
+% 2、获取十进制最高位的值，即符号位
 sign = bitget(decval, 4*length);
+% 3、符号位是否为负
 negative_numbers = (sign == 1);
+% 4、如果符号位为负则减去2的位数次方，否则不变
 decval(negative_numbers) = decval(negative_numbers) - bitshift(1, 4*length);
 end
 ```
