@@ -1,0 +1,15 @@
+﻿---
+layout: post
+title:  "qt-函数cpu占用率"
+date:   2019-11-13 19:00:00 +0200
+categories: matlab
+---
+### 1、查看进程   
+使用如下命令，查看所有进程cpu占用率,记下要分析进程的PID号
+```
+top
+```
+![image](/img/2019-11-13-qt-函数cpu占用率/top.gif "image")
+### 2、查看进程函数  
+使用如下命令，查看所有进程所有函数cpu占用率，最后的数字为要分析进程的PID号
+![image](/img/2019-11-13-qt-函数cpu占用率/detail.gif "image")
