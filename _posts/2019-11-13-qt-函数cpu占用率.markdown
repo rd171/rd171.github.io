@@ -12,4 +12,7 @@ top
 ![image](/img/2019-11-13-qt-函数cpu占用率/top.gif "image")
 ### 2、查看进程函数  
 使用如下命令，查看所有进程所有函数cpu占用率，最后的数字为要分析进程的PID号
+```
+perf top -g -p 246
+```
 ![image](/img/2019-11-13-qt-函数cpu占用率/detail.gif "image")
