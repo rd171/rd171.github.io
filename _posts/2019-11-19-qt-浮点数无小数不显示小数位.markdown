@@ -1,0 +1,26 @@
+﻿---
+layout: post
+title:  "qt-浮点数无小数不显示小数位"
+date:   2019-11-13 19:00:00 +0200
+categories: qt
+---
+### VC实现   
+```
+double dVal1 = 13.00;
+double dVal2 = 13.13;
+CString str1,str2;
+str1.Format(_T("%.02f"), dVal1);
+str2.Format(_T("%.02f"), dVal1);
+str1.Replace(_T(".00"), _T(""));
+str2.Replace(_T(".00"), _T(""));
+```
+### QT实现  
+```
+double dVal1 = 13.00;
+double dVal2 = 13.13;
+QString str1,str2;
+str1.sprintf("%.02f", dVal1);
+str2.sprintf("%.02f", dVal1);
+str1.replace(".00", "");
+str2.Replace(".00", "");
+```
