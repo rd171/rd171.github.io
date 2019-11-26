@@ -4,7 +4,7 @@
 # which you are expected to set up once and rarely need to edit after that.
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'jekyll serve'. If you change this file, please restart the server process.
-
+baidu-analysis： xxxxxxxxxxxxxxxxxxxxxxxxxxx
 # Site settings
 title: For Hi's Blog
 email: your-email@domain.com
@@ -17,4 +17,3 @@ github_username:  jekyll
 
 # Build settings
 markdown: kramdown
-baidu-analysis:xxxxxxxxxxxxxxxxxxxxxxxxxxx
