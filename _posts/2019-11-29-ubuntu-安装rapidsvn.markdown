@@ -14,7 +14,7 @@ sudo apt-get install rapidsvn
 sudo apt-get install meld
 ```
 
-### 3、打开RapidSVN -> View -> Preferences ->
+### 3、打开RapidSVN
 ```
 sudo rapidsvn
 ```
