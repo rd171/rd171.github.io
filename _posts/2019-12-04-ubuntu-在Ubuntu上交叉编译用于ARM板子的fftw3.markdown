@@ -8,16 +8,18 @@ categories: ubuntu
 ```
 sudo -i
 ```
-### 2、路径切换到FFTW3库源码目录
+### 2、下载fftw3源码并解压到
+http://www.fftw.org/fftw-3.3.8.tar.gz   
+### 3、路径切换到FFTW3库源码目录
 ```
 cd /home/kevin/BM/code/fftw-3.3.8
 ```
-### 3、导入ARM板的SDK编译环境
+### 4、导入ARM板的SDK编译环境
 ```
 . /opt/phytec-yogurt/BSP-Yocto-i.MX6-PD18.1.1/environment-setup-cortexa9hf-neon-phytec-linux-gnueabi
 ```  
 本例使用的phytec公司的cortexa9板子，SDK安装在Ubuntu系统的/opt/phytec-yogurt目录中，所以使用上面的路径。注意：“. /opt/”点号与后面的斜杠有一个空格   
-### 4、配置FFTW3库
+### 5、配置FFTW3库
 ```
 ./configure --prefix=/opt/fftw3 --host=arm-linux --enable-shared=yes --enable-double
 ```
@@ -25,22 +27,24 @@ cd /home/kevin/BM/code/fftw-3.3.8
 --host=arm-linux           指定目标系统类型   
 --enable-shared=yes        是否生成.so文件   
 --enable-double            使用双精度浮点   
-### 5、编译
+### 6、编译
 ```
 make
 ```
-### 6、生成
+### 7、生成
 ```
 make install
 ```
 至此会在Ubuntu系统的/opt/fftw3目录生成库文件   
-### 7、app中引用fftw3库
+### 8、app中引用fftw3库
 在xxx.pro文件中增加如下内容：   
 ```
 INCLUDEPATH += /opt/fftw3/include
 LIBS        += -L"/opt/fftw3/lib" -lfftw3
 ```
-### 8、app中使用fftw3库
+### 9、将fftw3库文件拷贝到arm板上
+将/opt/fftw3/lib/libfftw3.so.3.5.8拷贝到arm板的lib目录，并重命名为libfftw3.so.3
+### 10、app中使用fftw3库
 ```
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
