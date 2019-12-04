@@ -1,0 +1,22 @@
+﻿---
+layout: post
+title:  "ubuntu-交叉编译工具链命名规则"
+date:   2019-12-4 19:00:00 +0200
+categories: ubuntu
+---
+### 命名规则
+```
+arch [-vendor] [-os] [-(gnu)eabi]
+arch - 体系架构，如ARM，MIPS
+vendor - 工具链提供商
+os - 目标操作系统
+eabi - 嵌入式应用二进制接口（Embedded Application Binary Interface）
+```
+
+### 示例
+```
+arm-phytec-linux-gnueabi
+体系架构：ARM
+工具栏提供商：phytec
+目标操作系统：linux
+```  
