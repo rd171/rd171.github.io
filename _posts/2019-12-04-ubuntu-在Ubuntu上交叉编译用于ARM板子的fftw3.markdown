@@ -23,7 +23,7 @@ cd /home/kevin/BM/code/fftw-3.3.8
 ```
 ./configure --prefix=/opt/fftw3 --host=arm-linux --enable-shared=yes --enable-double
 ```
---prefix=/opt/fftw3        指定编译后生成文件的目录
+--prefix=/opt/fftw3        指定编译后生成文件的目录   
 --host=arm-linux           指定目标系统类型   
 --enable-shared=yes        是否生成.so文件   
 --enable-double            使用双精度浮点   
