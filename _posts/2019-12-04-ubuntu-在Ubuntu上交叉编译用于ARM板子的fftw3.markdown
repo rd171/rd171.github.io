@@ -1,6 +1,6 @@
 ﻿---
 layout: post
-title:  "ubuntu-交叉编译工具链命名规则"
+title:  "ubuntu-在Ubuntu上交叉编译用于ARM板子的fftw3"
 date:   2019-12-4 19:00:00 +0200
 categories: ubuntu
 ---
