@@ -59,3 +59,8 @@ svn　diff　-r　修正版本号m:修正版本号n　文件名
 svn  diff test.php
 svn  diff -r 200:201 test.php
 ```
+
+### 6、qt creator中使用subversion
+```
+QT Creator -> Tools -> subversion
+```
