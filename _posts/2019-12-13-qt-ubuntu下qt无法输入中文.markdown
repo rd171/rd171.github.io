@@ -25,15 +25,31 @@ system settings->language support->install/remove languages，在弹出的菜单
 system settings->language support->keyboard input method system，选择fcitx
 
 ### 2、Qt Creator支持搜狗输入法配置
-1）进入qt安装目录
+1）进入qt creator安装目录
 ```
 cd /opt/Qt5.9.6/Tools/QtCreator/lib/Qt/plugins/platforminputcontexts
 ```
 2）将搜狗输入法插件库到qt插件库目录中
 ```
- cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so .
+sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so .
 ```
 3）配置qt插件库中搜狗输入法插件库文件权限
 ```
-chomd +x libfcitxplatforminputcontextplugin.so
+sudo chmod +x libfcitxplatforminputcontextplugin.so
 ```
+4）重启Qt Creator
+
+### 3、发布程序无法输入中文
+1）进入qt编译器插件目录
+```
+cd /opt/Qt5.9.6/5.9.6/gcc_64/plugins
+```
+2）将搜狗输入法插件库到qt编译器插件库目录中
+```
+sudo cp /usr/lib/x86_64-linux-gnu/qt5/plugins/platforminputcontexts/libfcitxplatforminputcontextplugin.so .
+```
+3）配置qt编译器插件库中搜狗输入法插件库文件权限
+```
+sudo chmod +x libfcitxplatforminputcontextplugin.so
+```
+4）重新编译
