@@ -127,3 +127,10 @@ df -h
 ```
 env
 ```
+##### 安装字体
+进入字体目录    
+```
+sudo mkfontscale
+sudo mkfontdir
+sudo fc-cache
+```
