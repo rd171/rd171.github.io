@@ -21,7 +21,7 @@ After=systemd-udev-settle.service
 Type=simple
 User=root
 WorkingDirectory=/usr/bin/
-ExecStart=/usr/bin/BM
+ExecStart=/usr/bin/qtLauncher /usr/bin/BM
 
 # Detach the framebuffer console from fb0 before starting the QtDemo and
 # reattach it after QtDemo has stopped.
