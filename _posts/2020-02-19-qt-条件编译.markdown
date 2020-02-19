@@ -1,0 +1,19 @@
+﻿---
+layout: post
+title:  "qt-条件编译"
+date:   2020-2-19 19:00:00 +0200
+categories: qt
+---
+
+### 在工程文件xxx.pro中添加如下代码即可
+```
+# 编译平台宏，可以在源码中这样判断#ifdef PLATFORM_ARM
+#DEFINES += PLATFORM_ARM
+if ( contains(DEFINES, PLATFORM_ARM) ){
+    INCLUDEPATH += ../fftw3/arm/include
+    LIBS        += -L"../fftw3/arm/lib" -lfftw3
+}else{
+    INCLUDEPATH += ../fftw3/qt/include
+    LIBS        += -L"../fftw3/qt/lib" -lfftw3
+}
+```
