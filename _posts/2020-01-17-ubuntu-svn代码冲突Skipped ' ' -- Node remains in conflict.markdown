@@ -12,5 +12,5 @@ sudo svn resolve
 然后输入r
 ### 2、更新代码
 ```
-sudo svn resolve
+sudo svn update
 ```
