@@ -1,0 +1,14 @@
+﻿---
+layout: post
+title:  "在arm上通过命令行操作设备文件接口"
+date:   2020-03-06 19:00:00 +0200
+categories: arm
+---
+### 设备文件接口如下
+```
+/sys/class/leds/delica-alarm-red/brightness
+```
+### 将值设置为255的命令
+```
+echo 255 > /sys/class/leds/delica-alarm-red/brightness
+```
