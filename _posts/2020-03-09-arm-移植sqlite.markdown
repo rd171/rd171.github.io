@@ -55,3 +55,11 @@ sqlite3
 ```
 SQLite version 3.31.1 2020-01-27 19:55:54
 ```
+### 14、检验数据库
+```
+sqlite3
+.open /usr/bin/usrdb.db
+go
+select * from TabPatiInfo
+go
+```
