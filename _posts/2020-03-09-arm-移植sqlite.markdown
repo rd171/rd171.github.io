@@ -40,13 +40,23 @@ make install
 ```
 ### 10、移植到目标机器
 将bin文件夹中的文件拷贝到开发板的/bin中，并将lib中的文件拷贝到开发板的/lib中   
+### 11、修改权限
+```
+chmod 777 /bin/sqlite3
+```
 ### 12、在目标机器上建立连接
 ```
 cd /lib
 ln -s libsqlite3.so.0.8.6 libsqlite3.so.0
 ln -s libsqlite3.so.0.8.6 libsqlite3.so
 ```
-### 13、检验是否安装成功
+### 13、安装驱动
+将/usr/lib/x86_64-linux-gnu/qt5/plugins下的sqldrivers文件夹拷贝到arm主机执行程序同级目录并修改权限
+```
+chmod -R 777 /usr/bin/sqldrivers
+```
+
+### 14、检验是否安装成功
 输入以下命令  
 ```
 sqlite3  
@@ -55,7 +65,7 @@ sqlite3
 ```
 SQLite version 3.31.1 2020-01-27 19:55:54
 ```
-### 14、检验数据库
+### 15、检验数据库
 ```
 sqlite3
 .open /usr/bin/usrdb.db
