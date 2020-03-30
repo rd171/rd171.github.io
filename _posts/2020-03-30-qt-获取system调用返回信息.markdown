@@ -1,0 +1,19 @@
+﻿---
+layout: post
+title:  "qt-获取system调用返回信息"
+date:   2020-03-30 19:00:00 +0200
+categories: qt
+---
+
+```
+QString QFun::GetResultFromSystemCall(const char *pCmd)
+{
+    FILE   *stream;
+    char   buf[2048];
+    memset( buf, '\0', sizeof(buf) );
+    stream = popen( pCmd, "r" );
+    fread( buf, sizeof(char), sizeof(buf), stream);
+    pclose( stream );
+    return QString(buf);
+}
+```
