@@ -35,3 +35,11 @@ Tools -> Git -> Remote Repository -> Pull
 
 ### 7、QtCreator更新删除的文件
 Tools -> Git -> Local Repository -> Reset
+
+### 8、手动解决冲突代码
+```
+git status
+git add .
+git commit -m 'merge'
+git push
+```
