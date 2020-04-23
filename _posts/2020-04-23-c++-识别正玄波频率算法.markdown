@@ -1,0 +1,144 @@
+﻿---
+layout: post
+title:  ""
+date:   c++-识别正玄波频率算法
+categories: c++
+---
+### 1、需求
+需要采集信号发生器给定正弦波的频率
+
+### 2、方法
+通过求导求符号，找出正弦波的所有波峰，波峰与波峰即为频率
+
+### 3、问题
+ADC时信号可能失真，出现小的信号抖动，影响找到正确的波峰   
+
+### 4、优化方案
+在求导求符号前，先对信号进行移动平均，使曲线变得光滑
+
+### 5、代码
+```
+#ifndef QFREQUENCYDETECTOR_H
+#define QFREQUENCYDETECTOR_H
+
+
+class QFrequencyDetector
+{
+public:
+    /********************************************************************
+    PURPOSE:
+        构造频率探测类
+    PARAMETERS:
+        nFS              探测信号采样率
+        nCount           探测信号持续出现次数
+    RETURN VALUE:
+        成功返回对应指数控件索引，否则返回-1
+    *********************************************************************/
+    QFrequencyDetector(int nFS, int nCount);
+
+    /********************************************************************
+    PURPOSE:
+        计算信号频率
+    PARAMETERS:
+        dData              探测数据
+    RETURN VALUE:
+        探测成功返回信号频率，否则返回0
+    *********************************************************************/
+    double Calc(double dData);
+
+private:
+    int         m_nFS;      // 信号采样率
+    int         m_nCount;   // 连续出现多少次
+    double      m_dLast;    // 上一次的值
+    int         m_nLastDiff;
+    int         m_nLen;     // 上次顶点到这次顶点的采样数
+    int         m_nCurCount;// 已出现多少次
+    double      m_dLastFS;  // 上次频率
+
+    double      m_dMean[30]; // 移动平均计算
+
+};
+
+#endif // QFREQUENCYDETECTOR_H
+
+```
+```
+#include "qfrequencydetector.h"
+#include <QDebug>
+#include <QtMath>
+
+QFrequencyDetector::QFrequencyDetector(int nFS, int nCount)
+{
+    m_nFS       = nFS;
+    m_nCount    = nCount;
+    m_dLast     = 0;
+    m_nLen      = -1;
+    m_dLastFS   = 0;
+    m_nCurCount = 0;
+    m_nLastDiff = 0;
+
+    for ( int i = 0; i <30; i++ )
+        m_dMean[i]  = 0;
+}
+
+double QFrequencyDetector::Calc(double dData)
+{
+    // 移动平均
+    double dSum  = dData;
+    for ( int i = 0; i < 29; i++ )
+    {
+        m_dMean[i]  = m_dMean[i+1];
+        dSum        +=m_dMean[i+1];
+    }
+
+    m_dMean[29]  = dData;
+    dData       = dSum/30.0;
+
+    double dFreq    = 0;
+    int nDiff       = 0;
+    if ( dData > m_dLast )
+        nDiff   = 1;
+    else if ( dData < m_dLast )
+        nDiff   = -1;
+    else
+        nDiff   = m_nLastDiff;
+
+    if ( -1 != m_nLen )
+        m_nLen++;
+    // 峰值
+    if ( (nDiff - m_nLastDiff < 0) && (0 != nDiff) )
+    {
+        if ( -1 != m_nLen )
+        {
+            dFreq       = 1.0*m_nFS/m_nLen;
+            if ( qFabs(dFreq - m_dLastFS) < 0.2 )
+            {
+                m_nCurCount++;
+            }
+            else
+            {
+                m_nCurCount = 0;
+                m_dLastFS   = dFreq;
+            }
+            //qDebug("--->%.10lf-%.10lf %d", m_dLastFS, dFreq, m_nLen);
+            //qDebug("--->%.10lf-%.10lf %d", m_dLastFS, dFreq, m_nCurCount);
+            m_nLen      = -1;
+        }
+        else
+        {
+            m_nLen++;
+        }
+    }
+
+    m_dLast         = dData;
+    m_nLastDiff     = nDiff;
+
+    if ( m_nCurCount >= m_nCount )
+    {
+        m_nCurCount = m_nCount;
+        return m_dLastFS;
+    }
+    else
+        return 0;
+}
+```
