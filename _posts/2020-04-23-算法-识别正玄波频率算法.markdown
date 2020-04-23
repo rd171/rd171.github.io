@@ -1,8 +1,8 @@
 ﻿---
 layout: post
 title:  ""
-date:   c++-识别正玄波频率算法
-categories: c++
+date:   算法-识别正玄波频率算法
+categories: 算法
 ---
 ### 1、需求
 需要采集信号发生器给定正弦波的频率
