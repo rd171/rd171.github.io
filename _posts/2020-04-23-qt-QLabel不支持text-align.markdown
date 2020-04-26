@@ -1,7 +1,7 @@
 ﻿---
 layout: post
-title:  ""
-date:   qt-QLabel不支持text-align
+title:  "qt-QLabel不支持text-align"
+date:   2020-04-23 19:00:00 +0200
 categories: qt
 ---
 ### 1、问题
