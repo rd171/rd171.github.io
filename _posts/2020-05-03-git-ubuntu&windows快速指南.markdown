@@ -128,13 +128,6 @@ git reset --hard 33117bcbe4e920849cd5c2c06e843f5ba4649c23
 git push
 ```
 
-### git安装
-windows进入https://git-scm.com/downloads下载安装包   
-Ubuntu使用以下命令:
-```
-apt install git
-```
-
 ### git命令行窗口
 windows右键菜单中选择Git Bash Here   
 Ubuntu右键
