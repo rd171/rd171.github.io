@@ -76,7 +76,13 @@ git log --pretty=oneline | grep fix
 type(scope):subject   
 项目|说明
 -|-
-type|变更类型，feat(新功能)，fix（修复bug），style（格式调整），refactor（代码重构），
+type|变更类型，例如：feat(新功能)，fix（修复bug），style（格式调整），refactor（代码重构），chore（项目构建）
+scope|变更范围，例如：电压测量模块
+subject|变更的具体内容，例如：定向修正10Hz信号幅度
+完整示例如下：
+```
+git commit -m 'fix(VolMeasure):定向修正10Hz信号幅度'
+```
 
 ### 8、查看文件状态
 git有三种文件状态：untracked（未跟踪）、unmodify（已跟踪未修改）、modified（已跟踪并修改）、staged（已跟踪已修改已暂存，通过git add命令提交至暂存区），通过以下命令可以查看：
