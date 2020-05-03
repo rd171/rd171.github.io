@@ -46,6 +46,10 @@ Ubuntu使用以下命令:
 apt install git
 ```
 
+### git命令行窗口
+windows右键菜单中选择Git Bash Here   
+Ubuntu右键
+
 接口人   
 查看自己账户信息
 三种访问仓库的方法   
