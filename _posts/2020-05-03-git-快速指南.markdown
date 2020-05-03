@@ -25,10 +25,14 @@ git config --global alias.st status
 cat .git/config
 ```
 
-### 5、克隆
-进入仓库所在目录，打开.git文件夹下的config文件，或者输入如下命令:
+### 5、取代码
+取master
 ```
-cat .git/config
+git clone http://192.168.1.251:20200/chenzm/bm-7i.git
+```
+取分支
+```
+
 ```
 
 接口人   
