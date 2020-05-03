@@ -38,6 +38,7 @@ git clone -b 分支名 http://192.168.1.251:20200/chenzm/bm-7i.git
 ### 6、打标签
 ```
 git tag -a 标签名 -m '日志'
+git push --tag
 ```
 
 ### git安装
