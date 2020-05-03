@@ -48,13 +48,13 @@ git log
 得到如下日志
 ```
 commit 14550575f5d545f3fb016cffe197c65f303a23d1 (HEAD -> master, origin/master, origin/HEAD)
-Author: yanfh <yanfh@delicasz.com>
+Author: yanf <yanf@de.com>
 Date:   Sun May 3 11:39:14 2020 +0800
 
     1、增加pdf接口
 
 commit 33117bcbe4e920849cd5c2c06e843f5ba4649c23
-Author: yanfh <yanfh@delicasz.com>
+Author: yanf <yanf@de.com>
 Date:   Sun May 3 11:14:48 2020 +0800
 
     1、集成pdf功能
