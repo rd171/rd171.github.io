@@ -33,7 +33,10 @@ git clone http://192.168.1.251:20200/chenzm/bm-7i.git
 取分支   
 ```
 git clone -b 分支名 http://192.168.1.251:20200/chenzm/bm-7i.git
-
+```
+取标签
+```
+git clone -b 标签名 http://192.168.1.251:20200/chenzm/bm-7i.git
 ```
 ### 6、打标签
 ```
