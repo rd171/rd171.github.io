@@ -75,7 +75,7 @@ git log --pretty=oneline | grep fix
 
 ### 8、查看文件状态
 ![image](/img/2020-05-03-git-ubuntu&windows快速指南/status.jpg "image")  
-git有三种文件状态：untracked（未跟踪）、unmodify（已跟踪未修改）、modified（已跟踪并修改）、staged（已跟踪已修改已暂存，通过git add命令提交至暂存区），通过以下命令可以查看：
+git有三种文件状态：untracked（未跟踪）、unmodified（已跟踪未修改）、modified（已跟踪并修改）、staged（已跟踪已修改已暂存，通过git add命令提交至暂存区），通过以下命令可以查看：
 ```
 git status
 ```
