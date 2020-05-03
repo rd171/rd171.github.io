@@ -129,6 +129,7 @@ git push
 ```
 
 ### 12、安装git
+![image](/img/2020-05-03-git-ubuntu&windows快速指南/git&tgit.jpg "image") 
 windows下载file:///C:/Users/Kevin/Downloads/TortoiseGit-2.10.0.2-64bit.msi并安装
 ubuntu执行如下命令
 ```
