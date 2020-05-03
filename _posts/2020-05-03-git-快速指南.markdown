@@ -4,9 +4,18 @@ title:  "git-快速指南"
 date:   2020-05-03 19:00:00 +0200
 categories: git
 ---
-### 全局配置
+### 1、全局配置
 配置全局账户和邮箱
 ```
 git config --global user.name 'yanf'
 git config --global user.email 'yanf@de.com'
+```
+### 2、查看全局配置
+```
+git config --list
+```
+### 3、命令别名配置
+将git status配置为git st
+```
+git config --global alias.st status
 ```
