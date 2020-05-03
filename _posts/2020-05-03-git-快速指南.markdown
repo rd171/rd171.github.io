@@ -19,3 +19,8 @@ git config --list
 ```
 git config --global alias.st status
 ```
+### 4、查看仓库的配置信息
+进入仓库所在目录，打开.git文件夹下的config文件，或者输入如下命令:
+```
+cat .git/config
+```
