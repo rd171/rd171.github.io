@@ -102,6 +102,30 @@ subject|变更的具体内容，例如：定向修正10Hz信号幅度
 git commit -m 'fix(VolMeasure):定向修正10Hz信号幅度'
 ```
 
+### 11、撤销提交
+先用获得日志，得到要撤销位置对应的日志ID
+```
+git log
+```
+得到如下日志
+```
+commit 14550575f5d545f3fb016cffe197c65f303a23d1 (HEAD -> master, origin/master, origin/HEAD)
+Author: yanf <yanf@de.com>
+Date:   Sun May 3 11:39:14 2020 +0800
+
+    1、增加pdf接口
+
+commit 33117bcbe4e920849cd5c2c06e843f5ba4649c23
+Author: yanf <yanf@de.com>
+Date:   Sun May 3 11:14:48 2020 +0800
+
+    1、集成pdf功能
+```
+撤销命令,会撤销指定日志之后的所有提交
+```
+git reset --hard 33117bcbe4e920849cd5c2c06e843f5ba4649c23
+git push
+```
 
 ### git安装
 windows进入https://git-scm.com/downloads下载安装包   
