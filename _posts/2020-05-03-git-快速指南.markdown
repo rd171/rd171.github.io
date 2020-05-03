@@ -82,6 +82,9 @@ diff命令默认是查看未提交至暂存区的变化，查看提交至暂存�
 git diff -- staged
 ```
 
+### 10、提交文件
+
+
 ### git安装
 windows进入https://git-scm.com/downloads下载安装包   
 Ubuntu使用以下命令:
