@@ -25,7 +25,14 @@ git config --global alias.st status
 cat .git/config
 ```
 
+### 5、克隆
+进入仓库所在目录，打开.git文件夹下的config文件，或者输入如下命令:
+```
+cat .git/config
+```
+
 接口人   
+查看自己账户信息
 三种访问仓库的方法   
 从cvs、svn转换过来的痛点
 git必知必会的重要命令
