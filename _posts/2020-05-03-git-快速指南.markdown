@@ -68,6 +68,12 @@ Date:   Sun May 3 11:14:48 2020 +0800
 git tag -a 标签名 33117bcbe4e920849cd5c2c06e843f5ba4649c23 -m '日志'
 git push --tag
 ```
+### 8、查看文件状态
+git有三种文件状态：untracked（未跟踪）、unmodify（已跟踪未修改）、modified（已跟踪并修改）、staged（已跟踪已修改已暂存，通过add命令），通过以下命令可以查看：
+```
+git status
+```
+
 
 ### git安装
 windows进入https://git-scm.com/downloads下载安装包   
