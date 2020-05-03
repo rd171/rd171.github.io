@@ -24,3 +24,9 @@ git config --global alias.st status
 ```
 cat .git/config
 ```
+
+接口人   
+三种访问仓库的方法   
+从cvs、svn转换过来的痛点
+git必知必会的重要命令
+版本申请流程
