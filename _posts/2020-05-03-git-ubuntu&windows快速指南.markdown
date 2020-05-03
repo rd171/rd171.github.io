@@ -128,6 +128,13 @@ git reset --hard 33117bcbe4e920849cd5c2c06e843f5ba4649c23
 git push
 ```
 
+### 12、安装git
+windows下载file:///C:/Users/Kevin/Downloads/TortoiseGit-2.10.0.2-64bit.msi并安装
+ubuntu执行如下命令
+```
+apt install git
+```
+
 ### git命令行窗口
 windows右键菜单中选择Git Bash Here   
 Ubuntu右键
