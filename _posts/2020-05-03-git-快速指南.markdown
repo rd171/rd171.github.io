@@ -90,13 +90,12 @@ git diff -- staged
 ### 10、提交文件
 工作日志应以如下格式进行提交，方便查询和生成changelog:   
 type(scope):subject  
-
+<table border="1" cellspacing="0">
 项目|说明   
 -|-   
 type|变更类型，例如：feat(新功能)，fix（修复bug），style（格式调整），refactor（代码重构），chore（项目构建）   
 scope|变更范围，例如：电压测量模块   
 subject|变更的具体内容，例如：定向修正10Hz信号幅度   
-
 机构|覆盖区域|网址  
 -|-|-  
 NIC|总部|[https://www.internic.net/]  
