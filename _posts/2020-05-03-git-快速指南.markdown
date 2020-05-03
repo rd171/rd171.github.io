@@ -73,7 +73,11 @@ git有三种文件状态：untracked（未跟踪）、unmodify（已跟踪未修
 ```
 git status
 ```
-
+### 9、查看文件修改
+diff命令默认是查看未提交至暂存区的变化，
+```
+git diff
+```
 
 ### git安装
 windows进入https://git-scm.com/downloads下载安装包   
