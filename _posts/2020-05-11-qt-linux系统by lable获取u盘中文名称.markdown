@@ -12,6 +12,8 @@ categories: qt
 ###方案
 原因是linux以gbk编码方式，将其转换为utf-8即可，代码如下:
 ```
+QTextCodec* gbk     = QtextCodec::codecForName("GB18030");
+QTextCodec* utf8     = QtextCodec::codecForName("UTF-8");
 char szGbk[4]       = {0xb2, 0xe2, 0xca, 0xd4};
 QString strUnicode  = gbk->toUnicode(szGbk, 4);
 qDebug()<<strUnicode;
