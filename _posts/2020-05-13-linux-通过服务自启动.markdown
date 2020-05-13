@@ -1,0 +1,45 @@
+﻿---
+layout: post
+title:  "linux-通过服务自启动"
+date:   2020-5-13 19:00:00 +0200
+categories: linux
+---
+### 部署程序   
+将需要开机自启动的程序untitled9放在Linux系统中，例如/usr/mnt/untitle9
+
+### 编写服务文件   
+在/usr/lib/systemd/system/目录下新建立一个untitled9.service文件,内容如下
+```
+[Unit]
+Description=untitled9
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/mnt/untitle9
+
+[Install]
+WantedBy=multi-user.target
+```
+### 启用服务  
+重启systemctl系统服务和允许untitled9.service
+```
+systemctl daemon-reload
+systemctl enable untitled9.service
+```
+### 查看服务
+```
+systemctl status untitled9.service
+```
+### 查看程序是否运行
+```
+top
+```
+### 禁用服务  
+重启systemctl系统服务和禁用untitled9.service
+```
+systemctl daemon-reload
+systemctl disable untitled9.service
+```
