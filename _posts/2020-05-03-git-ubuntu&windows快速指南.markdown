@@ -135,6 +135,14 @@ git reset --hard
 git pull
 ```
 
+### 13、更新代码提示unmerged
+手动解决代码冲突后，用add命令添加到staged，然后提交,例如code/BM/xxx/yyy.cpp: unmerged(6ed7ff345b033d676d0f493b4ce90a6db1fb7cf5)
+```
+git add yyy.cpp
+git commit -m 'merge'
+git push
+```
+
 ### 13、安装git
 ![image](/img/2020-05-03-git-ubuntu&windows快速指南/git&tgit.jpg "image")
 windows下载file:///C:/Users/Kevin/Downloads/TortoiseGit-2.10.0.2-64bit.msi并安装
