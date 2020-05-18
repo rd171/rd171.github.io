@@ -128,8 +128,15 @@ git reset --hard 33117bcbe4e920849cd5c2c06e843f5ba4649c23
 git push
 ```
 
-### 12、安装git
-![image](/img/2020-05-03-git-ubuntu&windows快速指南/git&tgit.jpg "image") 
+### 12、解决代码冲突
+代码冲突是因为staged状态的文件冲突，解决方法可以reset冲掉staged区的文件，非staged区的文件不受影响
+```
+git reset --hard
+git pull
+```
+
+### 13、安装git
+![image](/img/2020-05-03-git-ubuntu&windows快速指南/git&tgit.jpg "image")
 windows下载file:///C:/Users/Kevin/Downloads/TortoiseGit-2.10.0.2-64bit.msi并安装
 ubuntu执行如下命令
 ```
