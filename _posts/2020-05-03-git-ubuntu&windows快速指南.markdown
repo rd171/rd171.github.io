@@ -143,7 +143,12 @@ git commit -m 'merge'
 git push
 ```
 
-### 13、安装git
+### 14、取删除的代码
+```
+git reset --hard
+```
+
+### 15、安装git
 ![image](/img/2020-05-03-git-ubuntu&windows快速指南/git&tgit.jpg "image")
 windows下载file:///C:/Users/Kevin/Downloads/TortoiseGit-2.10.0.2-64bit.msi并安装
 ubuntu执行如下命令
