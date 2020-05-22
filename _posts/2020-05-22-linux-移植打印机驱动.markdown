@@ -1,0 +1,16 @@
+﻿---
+layout: post
+title:  "linux-移植打印机驱动"
+date:   2020-5-22 19:00:00 +0200
+categories: linux
+---
+
+### 1、安装CUPS（Common Unix Printing System linux）
+```
+https://linux.softpedia.com/get/Printing/Common-UNIX-Printing-System-10427.shtml
+```
+
+### 2、安装驱动
+```
+https://www.canon.com.cn/supports/download/simsdetail/0100595012.html?modelId=1117&channel=1
+```
