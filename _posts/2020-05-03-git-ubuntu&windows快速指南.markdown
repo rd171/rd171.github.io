@@ -145,7 +145,8 @@ git push
 
 ### 14、取删除的代码
 ```
-git reset --hard
+git reset DevOps 文件名
+git checkout 文件名
 ```
 
 ### 15、安装git
