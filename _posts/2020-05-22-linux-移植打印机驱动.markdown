@@ -5,6 +5,38 @@ date:   2020-5-22 19:00:00 +0200
 categories: linux
 ---
 
+### 1、编译CUPS
+#### 1.1、下载CUPS源码
+```
+https://github.com/apple/cups/releases/tag/v2.3.3
+```
+#### 1.2、进入CUPS源码目录
+```
+cd ~/Downloads/cups/cups-2.3.3
+```
+#### 1.3、配置环境
+```
+./configure --host=arm-linux --prefix=/opt/cups
+```
+#### 1.4、编译
+```
+make
+```
+#### 1.5、安装
+```
+sudo make install
+```
+opt/cups目录即为cups程序文件
+### 2、移植CUPS到目标板
+#### 2.1、拷贝文件到目标板
+```
+```
+#### 2.2、测试CUPS
+```
+lpstat -v
+```
+
+
 ### 1、安装CUPS（Common Unix Printing System linux）
 ```
 https://linux.softpedia.com/get/Printing/Common-UNIX-Printing-System-10427.shtml
