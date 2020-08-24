@@ -1,0 +1,8 @@
+﻿---
+layout: post
+title:  "VC-MFC程序显示命令行窗口"
+date:   2020-08-24 19:00:00 +0200
+categories: arm
+---
+解决方案右键 -> 属性 -> 配置属性 -> 生成事件 -> 后期生成事件 -> 命令行输入如下命令：   
+editbin /SUBSYSTEM:CONSOLE $(OUTDIR)\$(TargetFileName)
