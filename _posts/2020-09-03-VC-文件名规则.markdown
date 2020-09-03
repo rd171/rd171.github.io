@@ -25,34 +25,33 @@ Windows NT:  CLOCK$ is also a reserved device name.
 ●Use a period (.) as a directory component in a path to represent the current directory.   
 ●Use two consecutive periods (..) as a directory component in a path to represent the parent of the current directory.   
 ### Maximum Path Length
-In the Windows API, the maximum length for a path is MAX_PATH, which is defined as 260 characters. A path is structured in the following order: drive letter, colon, backslash, components separated by backslashes, and a null-terminating character, for example, the maximum path on the D drive is D:\<256 chars>NUL.
+In the Windows API, the maximum length for a path is MAX_PATH, which is defined as 260 characters. A path is structured in the following order: drive letter, colon, backslash, components separated by backslashes, and a null-terminating character, for example, the maximum path on the D drive is D:\<256 chars>NUL.   
 
-The Unicode versions of several functions permit a maximum path length of approximately 32,000 characters composed of components up to 255 characters in length. To specify that kind of path, use the "\\?\" prefix.
+The Unicode versions of several functions permit a maximum path length of approximately 32,000 characters composed of components up to 255 characters in length. To specify that kind of path, use the "\\?\" prefix.   
 
-Note  The maximum path of 32,000 characters is approximate, because the "\\?\" prefix can be expanded to a longer string, and the expansion applies to the total length.
+Note  The maximum path of 32,000 characters is approximate, because the "\\?\" prefix can be expanded to a longer string, and the expansion applies to the total length.   
 
-For example, "\\?\D:\<path>". To specify such a UNC path, use the "\\?\UNC\" prefix. For example, "\\?\UNC\<server>\<share>". These prefixes are not used as part of the path itself. They indicate that the path should be passed to the system with minimal modification. An implication of this is that you cannot use forward slashes to represent path separators, or a period to represent the current directory. You cannot use the "\\?\" prefix with a relative path. Relative paths are limited to MAX_PATH characters.
+For example, "\\?\D:\<path>". To specify such a UNC path, use the "\\?\UNC\" prefix. For example, "\\?\UNC\<server>\<share>". These prefixes are not used as part of the path itself. They indicate that the path should be passed to the system with minimal modification. An implication of this is that you cannot use forward slashes to represent path separators, or a period to represent the current directory. You cannot use the "\\?\" prefix with a relative path. Relative paths are limited to MAX_PATH characters.   
 
-When using the API to create a directory, the specified path cannot be so long that you could not append an 8.3 file name.
+When using the API to create a directory, the specified path cannot be so long that you could not append an 8.3 file name.   
 
-The shell and the file system may have different requirements. It is possible to create a path with the API that the shell UI cannot handle.
-
-
-Relative Paths
-
-For functions that manipulate files, the file names may be relative to the current directory. A file name is relative to the current directory if it does not begin with a disk designator or directory name separator, such as a backslash (\). If the file name begins with a disk designator, it is a full path.
+The shell and the file system may have different requirements. It is possible to create a path with the API that the shell UI cannot handle.   
 
 
-Short and Long File Names
+### Relative Paths
 
-Windows normally stores the long file names on disk as special directory entries (this can be disabled for performance reasons). When you create a long file name, Windows also creates the short MS-DOS (8.3) form of the name. On many file systems, a short file name contains a tilde character (~). However, not all file systems follow this convention. Therefore, do not make this assumption.
-
-To get MS-DOS file names, long file names, or the full path of a file you can do the following:
+For functions that manipulate files, the file names may be relative to the current directory. A file name is relative to the current directory if it does not begin with a disk designator or directory name separator, such as a backslash (\). If the file name begins with a disk designator, it is a full path.   
 
 
-To get an MS-DOS file name that has a long file name, use the GetShortPathName function.
-To get the long file name that has a short name, use the GetLongPathName function.
-To get the full path of a file, use the GetFullPathName function.
+### Short and Long File Names
+
+Windows normally stores the long file names on disk as special directory entries (this can be disabled for performance reasons). When you create a long file name, Windows also creates the short MS-DOS (8.3) form of the name. On many file systems, a short file name contains a tilde character (~). However, not all file systems follow this convention. Therefore, do not make this assumption.   
+
+To get MS-DOS file names, long file names, or the full path of a file you can do the following:   
+
+●To get an MS-DOS file name that has a long file name, use the GetShortPathName function.   
+●To get the long file name that has a short name, use the GetLongPathName function.   
+●To get the full path of a file, use the GetFullPathName function.   
 
 Windows stores the long file names on disk in Unicode. This means that the original long file name is always preserved, even if it contains extended characters, and regardless of the code page that is active during a disk read or write operation. The case of the file name is preserved, but the file system is not case-sensitive.
 
