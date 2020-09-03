@@ -14,19 +14,17 @@ For example, the MS-DOS FAT file system supports 8 characters for the base file 
 ### Naming Conventions
 
 The following rules enable applications to create and process valid names for files and directories regardless of the file system:   
-●Use a period (.) to separate the base file name from the extension in a directory name or file name.
-Backslashes (\) are used to separate components in paths, which divides the file name from the path to it, or one directory from one another in a path. You cannot use backslashes in file or directory names. However, they can be required as part of volume names, for example, "C:\". UNC names must adhere to the following format: \\<server>\<share>.
-Use any character in the current code page for a name, except characters in the range of 0 through 31, or any character that the file system does not allow. A name can contain characters in the extended character set (128–255). However, it cannot contain the following reserved characters:
-< > : " / \ |
-
-The following reserved device names cannot be used as the name of a file: CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, and LPT9. Also avoid these names followed by an extension, for example, NUL.tx7.
-Windows NT:  CLOCK$ is also a reserved device name.
-Do not assume case sensitivity. Consider names such as OSCAR, Oscar, and oscar to be the same.
-Do not end a file or directory name with a trailing space or a period. Although the underlying file system may support such names, the operating system does not.
-Use a period (.) as a directory component in a path to represent the current directory.
-Use two consecutive periods (..) as a directory component in a path to represent the parent of the current directory.
-
-Maximum Path Length
+●Use a period (.) to separate the base file name from the extension in a directory name or file name.   
+●Backslashes (\) are used to separate components in paths, which divides the file name from the path to it, or one directory from one another in a path. You cannot use backslashes in file or directory names. However, they can be required as part of volume names, for example, "C:\". UNC names must adhere to the following format: \\<server>\<share>.   
+●Use any character in the current code page for a name, except characters in the range of 0 through 31, or any character that the file system does not allow. A name can contain characters in the extended character set (128–255). However, it cannot contain the following reserved characters:
+< > : " / \ |   
+●The following reserved device names cannot be used as the name of a file: CON, PRN, AUX, NUL, COM1, COM2, COM3, COM4, COM5, COM6, COM7, COM8, COM9, LPT1, LPT2, LPT3, LPT4, LPT5, LPT6, LPT7, LPT8, and LPT9. Also avoid these names followed by an extension, for example, NUL.tx7.
+Windows NT:  CLOCK$ is also a reserved device name.   
+●Do not assume case sensitivity. Consider names such as OSCAR, Oscar, and oscar to be the same.   
+●Do not end a file or directory name with a trailing space or a period. Although the underlying file system may support such names, the operating system does not.   
+●Use a period (.) as a directory component in a path to represent the current directory.   
+●Use two consecutive periods (..) as a directory component in a path to represent the parent of the current directory.   
+### Maximum Path Length
 In the Windows API, the maximum length for a path is MAX_PATH, which is defined as 260 characters. A path is structured in the following order: drive letter, colon, backslash, components separated by backslashes, and a null-terminating character, for example, the maximum path on the D drive is D:\<256 chars>NUL.
 
 The Unicode versions of several functions permit a maximum path length of approximately 32,000 characters composed of components up to 255 characters in length. To specify that kind of path, use the "\\?\" prefix.
