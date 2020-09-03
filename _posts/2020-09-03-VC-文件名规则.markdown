@@ -13,10 +13,8 @@ For example, the MS-DOS FAT file system supports 8 characters for the base file 
 
 ### Naming Conventions
 
-The following rules enable applications to create and process valid names for files and directories regardless of the file system:
-
-
-Use a period (.) to separate the base file name from the extension in a directory name or file name.
+The following rules enable applications to create and process valid names for files and directories regardless of the file system:   
+●Use a period (.) to separate the base file name from the extension in a directory name or file name.
 Backslashes (\) are used to separate components in paths, which divides the file name from the path to it, or one directory from one another in a path. You cannot use backslashes in file or directory names. However, they can be required as part of volume names, for example, "C:\". UNC names must adhere to the following format: \\<server>\<share>.
 Use any character in the current code page for a name, except characters in the range of 0 through 31, or any character that the file system does not allow. A name can contain characters in the extended character set (128–255). However, it cannot contain the following reserved characters:
 < > : " / \ |
