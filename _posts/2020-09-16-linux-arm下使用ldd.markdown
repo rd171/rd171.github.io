@@ -6,7 +6,7 @@ categories: linux
 ---
 
 ### 编写脚本  
-脚本如下，或下载此文件[ldd]:/img/ldd
+脚本如下，或下载此文件[ldd]
 ```
 #! /bin/sh
 # Copyright (C) 1996-2014 Free Software Foundation, Inc.
@@ -231,3 +231,4 @@ chmod 777 /usr/bin/ldd
 ```
 ldd /bin/cups/sbin/cupsd
 ```
+[ldd]:/img/ldd
