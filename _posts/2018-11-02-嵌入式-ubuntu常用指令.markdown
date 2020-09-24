@@ -134,3 +134,12 @@ sudo mkfontscale
 sudo mkfontdir
 sudo fc-cache
 ```
+##### 查看执行程序xxx的位数
+```
+file xxx
+```
+##### 查看linux系统的位数   
+其中I686 说明系统是32位的，如果是64位，输出信息会明确标识64
+```
+uname -a
+```
