@@ -143,3 +143,7 @@ file xxx
 ```
 uname -a
 ```
+##### 查看cup信息
+```
+cat /proc/cpuinfo
+```
