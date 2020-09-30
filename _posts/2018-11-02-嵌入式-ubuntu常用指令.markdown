@@ -147,3 +147,7 @@ uname -a
 ```
 cat /proc/cpuinfo
 ```
+##### 查看linux系统版本
+```
+ cat /proc/version
+```
