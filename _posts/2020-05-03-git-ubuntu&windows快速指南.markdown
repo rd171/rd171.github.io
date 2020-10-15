@@ -157,6 +157,26 @@ ubuntu执行如下命令
 apt install git
 ```
 
+### 16、修改日志
+1）、将当前代码rebase到一个分支，2表示最近2次提交   
+```
+git rebase -i HEAD~2
+```
+2）、在编辑界面中输入i，进入编辑，将pick该为edit，表示要修改   
+3）、编辑完后在英文输入法下按ESC键，然后输入:wq   
+4）、本地提交修改   
+```
+git commit --amend
+```
+5）、将分支还原   
+```
+git rebase --continue
+```
+6）提交到服务器   
+```
+git push
+```
+
 ### git命令行窗口
 windows右键菜单中选择Git Bash Here   
 Ubuntu右键
