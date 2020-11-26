@@ -32,27 +32,27 @@ group by p.object_id,p.index_id
 order by buffer_pages desc
 
 
--- 查询缓存的各类执行计划，及分别占了多少内存
--- 可以对比动态查询与参数化SQL（预定义语句）的缓存量
-select    cacheobjtype
-        , objtype
-        , sum(cast(size_in_bytes as bigint))/1024 as size_in_kb
-        , count(bucketid) as cache_count
-from    sys.dm_exec_cached_plans
-group by cacheobjtype, objtype
-order by cacheobjtype, objtype
+-- 查询缓存的各类执行计划，及分别占了多少内存   
+-- 可以对比动态查询与参数化SQL（预定义语句）的缓存量   
+select    cacheobjtype   
+        , objtype   
+        , sum(cast(size_in_bytes as bigint))/1024 as size_in_kb   
+        , count(bucketid) as cache_count   
+from    sys.dm_exec_cached_plans   
+group by cacheobjtype, objtype   
+order by cacheobjtype, objtype   
 
 
--- 查询缓存中具体的执行计划，及对应的SQL
--- 将此结果按照数据表或SQL进行统计，可以作为基线，调整索引时考虑
--- 查询结果会很大，注意将结果集输出到表或文件中
-SELECT  usecounts ,
-        refcounts ,
-        size_in_bytes ,
-        cacheobjtype ,
-        objtype ,
-        TEXT
-FROM    sys.dm_exec_cached_plans cp
-        CROSS APPLY sys.dm_exec_sql_text(plan_handle)
-ORDER BY objtype DESC ;
-GO
+-- 查询缓存中具体的执行计划，及对应的SQL   
+-- 将此结果按照数据表或SQL进行统计，可以作为基线，调整索引时考虑   
+-- 查询结果会很大，注意将结果集输出到表或文件中   
+SELECT  usecounts ,   
+        refcounts ,   
+        size_in_bytes ,   
+        cacheobjtype ,   
+        objtype ,   
+        TEXT   
+FROM    sys.dm_exec_cached_plans cp   
+        CROSS APPLY sys.dm_exec_sql_text(plan_handle)   
+ORDER BY objtype DESC ;   
+GO   
