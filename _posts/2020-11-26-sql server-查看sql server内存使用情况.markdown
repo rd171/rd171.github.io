@@ -5,31 +5,31 @@ date:   2020-11-26 19:00:00 +0200
 categories: sql server
 ---
 
--- 查询SqlServer总体的内存使用情况
-select      type
-        , sum(virtual_memory_reserved_kb) VM_Reserved
-        , sum(virtual_memory_committed_kb) VM_Commited
-        , sum(awe_allocated_kb) AWE_Allocated
-        , sum(shared_memory_reserved_kb) Shared_Reserved
-        , sum(shared_memory_committed_kb) Shared_Commited
-        --, sum(single_pages_kb)    --SQL2005、2008
-        --, sum(multi_pages_kb)        --SQL2005、2008
-from    sys.dm_os_memory_clerks
-group by type
-order by type
+-- 查询SqlServer总体的内存使用情况   
+select      type   
+        , sum(virtual_memory_reserved_kb) VM_Reserved   
+        , sum(virtual_memory_committed_kb) VM_Commited   
+        , sum(awe_allocated_kb) AWE_Allocated   
+        , sum(shared_memory_reserved_kb) Shared_Reserved   
+        , sum(shared_memory_committed_kb) Shared_Commited   
+        --, sum(single_pages_kb)    --SQL2005、2008   
+        --, sum(multi_pages_kb)        --SQL2005、2008   
+from    sys.dm_os_memory_clerks   
+group by type   
+order by type   
 
 
--- 查询当前数据库缓存的所有数据页面，哪些数据表，缓存的数据页面数量
--- 从这些信息可以看出，系统经常要访问的都是哪些表，有多大？
-select p.object_id, object_name=object_name(p.object_id), p.index_id, buffer_pages=count(*)
-from sys.allocation_units a,
-    sys.dm_os_buffer_descriptors b,
-    sys.partitions p
-where a.allocation_unit_id=b.allocation_unit_id
-    and a.container_id=p.hobt_id
-    and b.database_id=db_id()
-group by p.object_id,p.index_id
-order by buffer_pages desc
+-- 查询当前数据库缓存的所有数据页面，哪些数据表，缓存的数据页面数量   
+-- 从这些信息可以看出，系统经常要访问的都是哪些表，有多大？   
+select p.object_id, object_name=object_name(p.object_id), p.index_id,    buffer_pages=count(*)   
+from sys.allocation_units a,   
+    sys.dm_os_buffer_descriptors b,   
+    sys.partitions p   
+where a.allocation_unit_id=b.allocation_unit_id   
+    and a.container_id=p.hobt_id   
+    and b.database_id=db_id()   
+group by p.object_id,p.index_id   
+order by buffer_pages desc   
 
 
 -- 查询缓存的各类执行计划，及分别占了多少内存   
